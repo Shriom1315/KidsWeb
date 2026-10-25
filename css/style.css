@@ -207,3 +207,163 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .modal-content {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+
+/* ==================== SCROLL ANIMATIONS ==================== */
+
+/* Base hidden state for all animated elements */
+[data-animate] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 0.7s;
+  will-change: opacity, transform;
+}
+
+/* Visible (triggered) state */
+[data-animate].is-visible {
+  opacity: 1;
+  transform: none !important;
+}
+
+/* ---- Animation variants ---- */
+[data-animate="fade-up"] {
+  transform: translateY(40px);
+}
+[data-animate="fade-down"] {
+  transform: translateY(-40px);
+}
+[data-animate="fade-left"] {
+  transform: translateX(-50px);
+}
+[data-animate="fade-right"] {
+  transform: translateX(50px);
+}
+[data-animate="zoom-in"] {
+  transform: scale(0.85);
+}
+[data-animate="zoom-in-up"] {
+  transform: scale(0.88) translateY(30px);
+}
+[data-animate="flip-up"] {
+  transform: rotateX(20deg) translateY(30px);
+  transform-origin: bottom center;
+}
+
+/* ---- Stagger delay helpers ---- */
+[data-delay="100"] { transition-delay: 0.1s; }
+[data-delay="150"] { transition-delay: 0.15s; }
+[data-delay="200"] { transition-delay: 0.2s; }
+[data-delay="250"] { transition-delay: 0.25s; }
+[data-delay="300"] { transition-delay: 0.3s; }
+[data-delay="350"] { transition-delay: 0.35s; }
+[data-delay="400"] { transition-delay: 0.4s; }
+[data-delay="450"] { transition-delay: 0.45s; }
+[data-delay="500"] { transition-delay: 0.5s; }
+[data-delay="600"] { transition-delay: 0.6s; }
+[data-delay="700"] { transition-delay: 0.7s; }
+
+/* Section title badge pop */
+@keyframes badgePop {
+  0%   { transform: scale(0.7); opacity: 0; }
+  70%  { transform: scale(1.06); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+[data-animate="badge-pop"].is-visible {
+  animation: badgePop 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 1;
+}
+
+/* Slide-in underline for headings */
+.heading-underline {
+  position: relative;
+  display: inline-block;
+}
+.heading-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--accent-yellow);
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+}
+.heading-underline.is-visible::after {
+  width: 100%;
+}
+
+/* White underline variant for dark/purple backgrounds */
+.heading-underline-white::after {
+  background: rgba(255,255,255,0.7);
+}
+
+/* Parallax-style hero image subtle float-in */
+@keyframes heroEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.hero-img-entrance {
+  animation: heroEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* Counting number highlight pulse */
+@keyframes countPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+.stat-count.count-done {
+  animation: countPulse 0.45s ease-in-out;
+}
+
+/* Wave ripple on section entry */
+@keyframes waveReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+/* Card shimmer effect on hover */
+.shimmer-card {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255,255,255,0.18) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.shimmer-card:hover::after {
+  left: 125%;
+}
+
+/* Smooth scroll progress bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(to right, #fbb034, #eb1b70, #49249e);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}

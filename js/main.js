@@ -278,4 +278,77 @@ document.addEventListener('DOMContentLoaded', () => {
             newsletterForm.reset();
         });
     }
+
+    // ==================== 11. SCROLL PROGRESS BAR ====================
+    const progressBar = document.createElement('div');
+    progressBar.id = 'scroll-progress-bar';
+    document.body.prepend(progressBar);
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+    }, { passive: true });
+
+    // ==================== 12. INTERSECTION OBSERVER – SCROLL ANIMATIONS ====================
+    const animatedElements = document.querySelectorAll('[data-animate]');
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Once played, stop observing to save resources
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    animatedElements.forEach(el => scrollObserver.observe(el));
+
+    // Also trigger heading-underline elements
+    const underlineHeadings = document.querySelectorAll('.heading-underline');
+    const underlineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                underlineObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    underlineHeadings.forEach(el => underlineObserver.observe(el));
+
+    // ==================== 13. PARALLAX FLOATING DOODLES ON SCROLL ====================
+    const floatingDoodles = document.querySelectorAll('.parallax-doodle');
+    if (floatingDoodles.length > 0) {
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            floatingDoodles.forEach(doodle => {
+                const speed = parseFloat(doodle.dataset.parallaxSpeed) || 0.08;
+                doodle.style.transform = `translateY(${scrollY * speed}px)`;
+            });
+        }, { passive: true });
+    }
+
+    // ==================== 14. HOVER TILT EFFECT ON CARDS ====================
+    const tiltCards = document.querySelectorAll('.tilt-card');
+    tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const cx = rect.width / 2;
+            const cy = rect.height / 2;
+            const rotateX = ((y - cy) / cy) * -5;
+            const rotateY = ((x - cx) / cx) * 5;
+            card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
 });

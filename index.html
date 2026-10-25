@@ -141,7 +141,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Left Hero Text & CTA -->
-                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left" data-animate="fade-left">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] font-heading">
                         Bright Beginnings <br>
                         Last a <span class="text-kiddy-yellow">Lifetime</span>
@@ -190,7 +190,7 @@
                 </div>
 
                 <!-- Right Hero Image Graphic Composition -->
-                <div class="lg:col-span-6 relative flex justify-center items-center">
+                <div class="lg:col-span-6 relative flex justify-center items-center" data-animate="fade-right" data-delay="200">
                     <div class="relative w-[350px] h-[350px] sm:w-[460px] sm:h-[460px] flex items-center justify-center">
                         
                         <!-- Concentric Background Rings -->
@@ -232,7 +232,7 @@
 
                         <!-- Hero Jumping Girl Cutout (Clean AI segmented PNG) -->
                         <div class="relative z-10 w-full h-full flex items-center justify-center pointer-events-none">
-                            <img src="assets/images/hero_jumping_girl.png" alt="Happy school girl jumping" class="w-[92%] h-[92%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                            <img src="assets/images/hero_jumping_girl.png" alt="Happy school girl jumping" class="w-[92%] h-[92%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 hero-img-entrance">
                         </div>
 
                     </div>
@@ -255,7 +255,7 @@
             <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
                 
                 <!-- Left: Pointing Boy & Headline with organic container -->
-                <div class="flex items-center space-x-6 sm:space-x-8">
+                <div class="flex items-center space-x-6 sm:space-x-8" data-animate="fade-left">
                     <!-- Pointing boy image cutout -->
                     <div class="w-24 h-28 sm:w-28 sm:h-32 flex-shrink-0 relative">
                         <img src="assets/images/pointing_boy.png" alt="Preschool boy pointing up" class="w-full h-full object-contain">
@@ -272,7 +272,7 @@
                 <!-- Right: 4 Stat Counters in Organic Rounded Cards -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full lg:w-auto">
                     <!-- Stat 1 -->
-                    <div class="stat-organic-box bg-purple-50/70 border border-purple-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group">
+                    <div class="stat-organic-box bg-purple-50/70 border border-purple-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group shimmer-card" data-animate="zoom-in" data-delay="100">
                         <div class="w-10 h-10 rounded-2xl bg-purple-200/70 text-kiddy-purple flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-shapes text-lg"></i>
                         </div>
@@ -281,7 +281,7 @@
                     </div>
 
                     <!-- Stat 2 -->
-                    <div class="stat-organic-box bg-cyan-50/70 border border-cyan-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group">
+                    <div class="stat-organic-box bg-cyan-50/70 border border-cyan-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group shimmer-card" data-animate="zoom-in" data-delay="200">
                         <div class="w-10 h-10 rounded-2xl bg-cyan-200/70 text-cyan-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-chalkboard-user text-lg"></i>
                         </div>
@@ -290,7 +290,7 @@
                     </div>
 
                     <!-- Stat 3 -->
-                    <div class="stat-organic-box bg-emerald-50/70 border border-emerald-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group">
+                    <div class="stat-organic-box bg-emerald-50/70 border border-emerald-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group shimmer-card" data-animate="zoom-in" data-delay="300">
                         <div class="w-10 h-10 rounded-2xl bg-emerald-200/70 text-emerald-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-face-smile text-lg"></i>
                         </div>
@@ -299,7 +299,7 @@
                     </div>
 
                     <!-- Stat 4 -->
-                    <div class="stat-organic-box bg-amber-50/70 border border-amber-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group">
+                    <div class="stat-organic-box bg-amber-50/70 border border-amber-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group shimmer-card" data-animate="zoom-in" data-delay="400">
                         <div class="w-10 h-10 rounded-2xl bg-amber-200/70 text-amber-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-trophy text-lg"></i>
                         </div>
@@ -319,7 +319,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Left: Programs Header + 6 Program Cards -->
-                <div class="lg:col-span-7 space-y-8">
+                <div class="lg:col-span-7 space-y-8" data-animate="fade-left">
                     <!-- Section Title -->
                     <div>
                         <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
@@ -327,7 +327,7 @@
                             <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Age-Appropriate Stages</span>
                         </div>
                         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
-                            Our Programs
+                            Our <span class="heading-underline">Programs</span>
                         </h2>
                     </div>
 
@@ -335,7 +335,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         
                         <!-- 1. Play Group -->
-                        <div class="program-organic-card bg-orange-50/60 border border-orange-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-orange-400 group">
+                        <div class="program-organic-card bg-orange-50/60 border border-orange-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-orange-400 group shimmer-card" data-animate="fade-up" data-delay="100">
                             <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-500 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
                                 <i class="fa-solid fa-cubes"></i>
                             </div>
@@ -346,7 +346,7 @@
                         </div>
 
                         <!-- 2. Kindergarten -->
-                        <div class="program-organic-card bg-emerald-50/60 border border-emerald-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-emerald-400 group">
+                        <div class="program-organic-card bg-emerald-50/60 border border-emerald-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-emerald-400 group shimmer-card" data-animate="fade-up" data-delay="200">
                             <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
@@ -357,7 +357,7 @@
                         </div>
 
                         <!-- 3. Pre Nursery -->
-                        <div class="program-organic-card bg-amber-50/60 border border-amber-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-amber-400 group">
+                        <div class="program-organic-card bg-amber-50/60 border border-amber-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-amber-400 group shimmer-card" data-animate="fade-up" data-delay="300">
                             <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-500 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
                                 <i class="fa-solid fa-puzzle-piece"></i>
                             </div>
@@ -368,7 +368,7 @@
                         </div>
 
                         <!-- 4. Afterschool Care -->
-                        <div class="program-organic-card bg-sky-50/60 border border-sky-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-sky-400 group">
+                        <div class="program-organic-card bg-sky-50/60 border border-sky-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-sky-400 group shimmer-card" data-animate="fade-up" data-delay="400">
                             <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-500 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
                                 <i class="fa-solid fa-clock-rotate-left"></i>
                             </div>
@@ -379,7 +379,7 @@
                         </div>
 
                         <!-- 5. Nursery -->
-                        <div class="program-organic-card bg-purple-50/60 border border-purple-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-purple-400 group">
+                        <div class="program-organic-card bg-purple-50/60 border border-purple-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-purple-400 group shimmer-card" data-animate="fade-up" data-delay="500">
                             <div class="w-12 h-12 rounded-2xl bg-purple-100 text-kiddy-purple flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
                                 <i class="fa-solid fa-book-open-reader"></i>
                             </div>
@@ -390,7 +390,7 @@
                         </div>
 
                         <!-- 6. Summer Camp -->
-                        <div class="program-organic-card bg-yellow-50/60 border border-yellow-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-yellow-400 group">
+                        <div class="program-organic-card bg-yellow-50/60 border border-yellow-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-yellow-400 group shimmer-card" data-animate="fade-up" data-delay="600">
                             <div class="w-12 h-12 rounded-2xl bg-yellow-100 text-amber-500 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
                                 <i class="fa-solid fa-campground"></i>
                             </div>
@@ -412,7 +412,7 @@
                 </div>
 
                 <!-- Right: "Learning is Fun & Engaging" Soft Card -->
-                <div class="lg:col-span-5">
+                <div class="lg:col-span-5" data-animate="fade-right" data-delay="200">
                     <div class="bg-kiddy-peach rounded-[32px] p-6 sm:p-8 border-2 border-orange-100 shadow-sm relative overflow-hidden">
                         
                         <div class="flex flex-col space-y-4 mb-6">
@@ -476,7 +476,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Left: Jumping Boy with Arch/Ring -->
-                <div class="lg:col-span-5 flex justify-center items-center">
+                <div class="lg:col-span-5 flex justify-center items-center" data-animate="zoom-in">
                     <div class="relative w-72 h-72 sm:w-88 sm:h-88 flex items-center justify-center">
                         
                         <!-- Circular Green/Cyan Arch ring -->
@@ -492,14 +492,14 @@
                 </div>
 
                 <!-- Right: Why Choose Us Content & 4 Translucent Feature Cards -->
-                <div class="lg:col-span-7 space-y-8">
+                <div class="lg:col-span-7 space-y-8" data-animate="fade-right" data-delay="150">
                     <div>
                         <div class="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full mb-3">
                             <span class="w-2.5 h-2.5 rounded-full bg-kiddy-yellow"></span>
                             <span class="text-xs font-bold tracking-wider text-purple-200 uppercase">Our Core Strengths</span>
                         </div>
                         <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-                            Why Choose Us?
+                            <span class="heading-underline heading-underline-white">Why Choose Us?</span>
                         </h2>
                     </div>
 
@@ -507,7 +507,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         
                         <!-- Card 1 -->
-                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4">
+                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4 tilt-card" data-animate="fade-up" data-delay="100">
                             <div class="w-12 h-12 rounded-2xl bg-orange-500/25 border border-orange-400/40 text-orange-400 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
                                 <i class="fa-solid fa-book-bookmark"></i>
                             </div>
@@ -518,7 +518,7 @@
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4">
+                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4 tilt-card" data-animate="fade-up" data-delay="200">
                             <div class="w-12 h-12 rounded-2xl bg-pink-500/25 border border-pink-400/40 text-pink-400 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
                                 <i class="fa-solid fa-shield-heart"></i>
                             </div>
@@ -529,7 +529,7 @@
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4">
+                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4 tilt-card" data-animate="fade-up" data-delay="300">
                             <div class="w-12 h-12 rounded-2xl bg-blue-500/25 border border-blue-400/40 text-blue-400 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
                                 <i class="fa-solid fa-clock"></i>
                             </div>
@@ -540,7 +540,7 @@
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4">
+                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4 tilt-card" data-animate="fade-up" data-delay="400">
                             <div class="w-12 h-12 rounded-2xl bg-teal-500/25 border border-teal-400/40 text-teal-300 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
                                 <i class="fa-solid fa-apple-whole"></i>
                             </div>
@@ -579,7 +579,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Left: Holistic Development Text & 4 Checkmarks -->
-                <div class="lg:col-span-7 space-y-6">
+                <div class="lg:col-span-7 space-y-6" data-animate="fade-left">
                     <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
                         <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Nurturing All Dimensions</span>
@@ -639,7 +639,7 @@
                 </div>
 
                 <!-- Right: Cute Standing Schoolgirl cutout with globe outline -->
-                <div class="lg:col-span-5 flex justify-center items-center relative">
+                <div class="lg:col-span-5 flex justify-center items-center relative" data-animate="zoom-in-up" data-delay="200">
                     <!-- Wireframe globe in background -->
                     <div class="absolute -right-4 top-1/2 -translate-y-1/2 opacity-25 pointer-events-none">
                         <svg class="w-48 h-48 text-kiddy-purple" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
@@ -718,13 +718,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Heading & Controls -->
-            <div class="text-center mb-8">
+            <div class="text-center mb-8" data-animate="fade-up">
                 <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
                     <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
                     <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Campus Life &amp; Moments</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
-                    Our Gallery
+                    <span class="heading-underline">Our Gallery</span>
                 </h2>
             </div>
 
@@ -739,7 +739,7 @@
                 <div id="gallery-slider" class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth no-scrollbar py-2 px-2 w-full">
                     
                     <!-- 1. Heart Sign Girl -->
-                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative" data-animate="zoom-in" data-delay="100">
                         <img src="assets/images/gallery_heart_girl.jpg" alt="Child making heart with hands" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
                             <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
@@ -747,7 +747,7 @@
                     </div>
 
                     <!-- 2. Clay/Playdough Toddler -->
-                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative" data-animate="zoom-in" data-delay="200">
                         <img src="assets/images/gallery_playdough.jpg" alt="Toddler playing with play dough" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
                             <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
@@ -755,7 +755,7 @@
                     </div>
 
                     <!-- 3. Painting Kids -->
-                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative" data-animate="zoom-in" data-delay="300">
                         <img src="assets/images/gallery_painting.jpg" alt="Kids finger painting in art class" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
                             <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
@@ -763,7 +763,7 @@
                     </div>
 
                     <!-- 4. Science Discovery -->
-                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative" data-animate="zoom-in" data-delay="400">
                         <img src="assets/images/gallery_science.jpg" alt="Students observing plants with magnifying glass" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
                             <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
@@ -771,7 +771,7 @@
                     </div>
 
                     <!-- 5. Playground Slide -->
-                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative" data-animate="zoom-in" data-delay="500">
                         <img src="assets/images/gallery_slide.jpg" alt="Happy kid sliding on indoor slide" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
                             <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
@@ -802,7 +802,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
                 <!-- Left: Mom Portrait + Heading + Stars -->
-                <div class="lg:col-span-5 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
+                <div class="lg:col-span-5 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left" data-animate="fade-left">
                     <!-- Photo of smiling mom with organic rounded frame -->
                     <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-[28px] overflow-hidden border-4 border-white/40 shadow-xl flex-shrink-0">
                         <img src="assets/images/parent_smiling.jpg" alt="Parent Priya Sharma" class="w-full h-full object-cover">
@@ -825,7 +825,7 @@
                 </div>
 
                 <!-- Right: Testimonial Quote + Next Button -->
-                <div class="lg:col-span-7 flex items-center justify-between gap-6 pl-0 lg:pl-6 bg-white/10 rounded-[28px] p-6 border border-white/20 backdrop-blur-sm">
+                <div class="lg:col-span-7 flex items-center justify-between gap-6 pl-0 lg:pl-6 bg-white/10 rounded-[28px] p-6 border border-white/20 backdrop-blur-sm" data-animate="fade-right" data-delay="200">
                     <div class="space-y-4 max-w-xl">
                         <!-- Big quote marks -->
                         <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-white/60"></i>
@@ -868,13 +868,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Heading -->
-            <div class="text-center mb-10">
+            <div class="text-center mb-10" data-animate="fade-up">
                 <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
                     <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
                     <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Parenting Insights &amp; Updates</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
-                    Latest News
+                    <span class="heading-underline">Latest News</span>
                 </h2>
             </div>
 
@@ -889,7 +889,7 @@
                 <div id="news-slider" class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto scroll-smooth no-scrollbar py-2 px-2 w-full">
                     
                     <!-- Blog Card 1 -->
-                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group">
+                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group shimmer-card" data-animate="fade-up" data-delay="100">
                         <div class="space-y-4">
                             <div class="rounded-2xl overflow-hidden h-48 bg-slate-100">
                                 <img src="assets/images/blog_play_learning.jpg" alt="Benefits of play-based learning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -911,7 +911,7 @@
                     </article>
 
                     <!-- Blog Card 2 -->
-                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group">
+                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group shimmer-card" data-animate="fade-up" data-delay="250">
                         <div class="space-y-4">
                             <div class="rounded-2xl overflow-hidden h-48 bg-slate-100">
                                 <img src="assets/images/blog_healthy_habits.jpg" alt="Healthy habits for growing children" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -933,7 +933,7 @@
                     </article>
 
                     <!-- Blog Card 3 -->
-                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group">
+                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group shimmer-card" data-animate="fade-up" data-delay="400">
                         <div class="space-y-4">
                             <div class="rounded-2xl overflow-hidden h-48 bg-slate-100">
                                 <img src="assets/images/blog_preschool_choice.jpg" alt="How to choose the right preschool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -985,7 +985,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <!-- OVERLAPPING YELLOW CAPSULE CTA BANNER WITH TELESCOPE BOY (Seamlessly resting on purple footer) -->
-            <div class="relative -mt-14 sm:-mt-16 mb-16 flex flex-col md:flex-row items-center justify-between">
+            <div class="relative -mt-14 sm:-mt-16 mb-16 flex flex-col md:flex-row items-center justify-between" data-animate="zoom-in-up">
                 
                 <!-- Boy with telescope sitting on the left (Clean AI segmented PNG) -->
                 <div class="w-52 sm:w-64 h-52 sm:h-64 flex-shrink-0 z-20 -mb-6 md:mb-0 md:-mr-12">
