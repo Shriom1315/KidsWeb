@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiddyLand - Bright Beginnings Last a Lifetime | Premium Preschool & Kindergarten</title>
+    <meta name="description" content="Nurturing curious minds through creative learning and joyful experiences. Enroll your child at KiddyLand today for holistic early childhood education.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kiddy: {
+                            purple: '#49249e',
+                            purpleDark: '#351375',
+                            purpleDeep: '#230a52',
+                            yellow: '#fbb034',
+                            yellowLight: '#ffc107',
+                            pink: '#eb1b70',
+                            pinkDark: '#c2185b',
+                            green: '#22c55e',
+                            greenHill: '#4ade80',
+                            cyan: '#06b6d4',
+                            orange: '#f97316',
+                            peach: '#fef8f0',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'Fredoka', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-slate-800 antialiased font-body selection:bg-kiddy-yellow selection:text-kiddy-purpleDark m-0 p-0">
+
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="bg-kiddy-purple text-white relative z-40 sticky top-0 transition-all duration-300 shadow-md" id="main-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#hero" class="flex items-center space-x-2.5 group">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 to-amber-300 flex items-center justify-center text-kiddy-purple shadow-md transform group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fa-solid fa-star text-xl text-yellow-900"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight font-heading text-white">Kiddy<span class="text-kiddy-yellow">Land</span></span>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium text-purple-100">
+                    <a href="#hero" class="text-white hover:text-kiddy-yellow transition-colors font-semibold">Home</a>
+                    <a href="#stats-section" class="hover:text-kiddy-yellow transition-colors">About Us</a>
+                    <a href="#programs-section" class="hover:text-kiddy-yellow transition-colors">Programs</a>
+                    <a href="#holistic-section" class="hover:text-kiddy-yellow transition-colors">Admissions</a>
+                    <div class="relative group cursor-pointer py-2">
+                        <span class="hover:text-kiddy-yellow transition-colors flex items-center gap-1">
+                            Pages <i class="fa-solid fa-chevron-down text-xs opacity-70 group-hover:rotate-180 transition-transform"></i>
+                        </span>
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white text-slate-800 rounded-2xl shadow-xl py-2 z-50 border border-purple-100 animate-fadeIn">
+                            <a href="#gallery-section" class="block px-4 py-2 hover:bg-purple-50 hover:text-kiddy-purple text-sm">School Gallery</a>
+                            <a href="#why-choose-us" class="block px-4 py-2 hover:bg-purple-50 hover:text-kiddy-purple text-sm">Why Choose Us</a>
+                            <a href="#testimonials-section" class="block px-4 py-2 hover:bg-purple-50 hover:text-kiddy-purple text-sm">Parent Reviews</a>
+                            <a href="#blog-section" class="block px-4 py-2 hover:bg-purple-50 hover:text-kiddy-purple text-sm">Latest Articles</a>
+                        </div>
+                    </div>
+                    <a href="#blog-section" class="hover:text-kiddy-yellow transition-colors">Blog</a>
+                    <a href="#footer-section" class="hover:text-kiddy-yellow transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop Enroll Button -->
+                <div class="hidden md:block">
+                    <button class="btn-enroll bg-kiddy-yellow hover:bg-amber-400 text-kiddy-purpleDark font-bold px-7 py-2.5 rounded-full shadow-lg hover:shadow-yellow-400/30 transform hover:-translate-y-0.5 transition-all text-sm tracking-wide">
+                        Enroll Now
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-kiddy-yellow focus:outline-none p-2" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-kiddy-purpleDark border-t border-purple-800 px-6 py-4 space-y-3">
+            <a href="#hero" class="block text-white font-medium py-1 hover:text-kiddy-yellow">Home</a>
+            <a href="#stats-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">About Us</a>
+            <a href="#programs-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Programs</a>
+            <a href="#holistic-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Admissions</a>
+            <a href="#gallery-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Gallery</a>
+            <a href="#blog-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Blog</a>
+            <a href="#footer-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Contact</a>
+            <div class="pt-2">
+                <button class="btn-enroll w-full bg-kiddy-yellow text-kiddy-purpleDark font-bold py-2.5 rounded-full shadow text-sm">
+                    Enroll Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="bg-kiddy-purple text-white relative pt-12 pb-0 overflow-hidden">
+        <!-- Floating playful doodles -->
+        <div class="absolute inset-0 pointer-events-none select-none overflow-hidden opacity-35">
+            <!-- Paper Plane Doodle -->
+            <svg class="absolute top-12 left-1/4 w-12 h-12 text-purple-300 animate-float" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 9-9 3-3 9-6-21z"/>
+            </svg>
+            <!-- Saturn Planet Outline -->
+            <svg class="absolute top-8 right-20 w-16 h-16 text-purple-300/60 animate-float" style="animation-delay: 1.5s;" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="6" />
+                <path d="M4 12c0-3.3 3.6-6 8-6s8 2.7 8 6-3.6 6-8 6-8-2.7-8-6z" transform="rotate(-20 12 12)" />
+            </svg>
+            <!-- Stars / Sparkles -->
+            <i class="fa-solid fa-star absolute top-1/3 left-10 text-yellow-300 text-sm animate-twinkle"></i>
+            <i class="fa-solid fa-sparkles absolute top-16 left-1/3 text-white text-lg animate-twinkle" style="animation-delay: 0.8s;"></i>
+            <i class="fa-solid fa-star absolute bottom-36 left-1/4 text-purple-300 text-xs animate-twinkle" style="animation-delay: 2s;"></i>
+            <i class="fa-solid fa-star absolute top-28 right-1/3 text-yellow-300 text-xs animate-twinkle" style="animation-delay: 1.2s;"></i>
+            <!-- Dotted flight trail curve -->
+            <svg class="absolute top-1/4 right-1/4 w-40 h-28 text-purple-300/30" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" viewBox="0 0 100 100">
+                <path d="M 10 90 Q 60 20 90 40" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Text & CTA -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] font-heading">
+                        Bright Beginnings <br>
+                        Last a <span class="text-kiddy-yellow">Lifetime</span>
+                    </h1>
+
+                    <p class="text-purple-200 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Nurturing curious minds through creative learning and joyful experiences.
+                    </p>
+
+                    <!-- Buttons Row -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <button class="btn-enroll bg-kiddy-yellow hover:bg-amber-400 text-kiddy-purpleDark font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-yellow-400/40 transform hover:-translate-y-0.5 transition-all text-sm flex items-center space-x-2">
+                            <span>Enroll Now</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                        <button class="btn-tour bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm font-semibold px-7 py-3.5 rounded-full transition-all text-sm flex items-center space-x-2.5">
+                            <span>Take a Tour</span>
+                            <span class="w-5 h-5 rounded-full bg-white text-kiddy-purple flex items-center justify-center text-[10px] pl-0.5">▶</span>
+                        </button>
+                    </div>
+
+                    <!-- Feature Pills / Badges -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-6">
+                        <!-- Safe Environment -->
+                        <div class="flex items-center space-x-2 bg-purple-900/50 border border-purple-400/25 px-4 py-2 rounded-full backdrop-blur-sm shadow-sm hover:border-green-400 transition-colors">
+                            <span class="w-6 h-6 rounded-full bg-green-500/25 border border-green-400 flex items-center justify-center text-green-300 text-xs">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </span>
+                            <span class="text-xs sm:text-sm font-medium text-purple-100">Safe Environment</span>
+                        </div>
+                        <!-- Expert Teachers -->
+                        <div class="flex items-center space-x-2 bg-purple-900/50 border border-purple-400/25 px-4 py-2 rounded-full backdrop-blur-sm shadow-sm hover:border-cyan-400 transition-colors">
+                            <span class="w-6 h-6 rounded-full bg-cyan-500/25 border border-cyan-400 flex items-center justify-center text-cyan-300 text-xs">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </span>
+                            <span class="text-xs sm:text-sm font-medium text-purple-100">Expert Teachers</span>
+                        </div>
+                        <!-- Fun Activities -->
+                        <div class="flex items-center space-x-2 bg-purple-900/50 border border-purple-400/25 px-4 py-2 rounded-full backdrop-blur-sm shadow-sm hover:border-pink-400 transition-colors">
+                            <span class="w-6 h-6 rounded-full bg-pink-500/25 border border-pink-400 flex items-center justify-center text-pink-300 text-xs">
+                                <i class="fa-solid fa-shapes"></i>
+                            </span>
+                            <span class="text-xs sm:text-sm font-medium text-purple-100">Fun Activities</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Graphic Composition -->
+                <div class="lg:col-span-6 relative flex justify-center items-center">
+                    <div class="relative w-[350px] h-[350px] sm:w-[460px] sm:h-[460px] flex items-center justify-center">
+                        
+                        <!-- Concentric Background Rings -->
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-800 via-fuchsia-700 to-pink-600 opacity-90 shadow-2xl"></div>
+                        <div class="absolute inset-4 sm:inset-6 rounded-full bg-kiddy-purple border-4 border-fuchsia-500/40 flex items-center justify-center overflow-hidden">
+                            <div class="w-full h-full bg-radial from-purple-500/30 to-transparent"></div>
+                        </div>
+
+                        <!-- Yellow 4-point Star on left side of ring -->
+                        <div class="absolute left-0 top-1/4 -translate-x-3 z-20">
+                            <svg class="w-12 h-12 text-yellow-400 drop-shadow-md animate-float" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Blue origami bird / flying plane top right -->
+                        <div class="absolute top-4 right-4 z-20 animate-float" style="animation-delay: 1s;">
+                            <svg class="w-10 h-10 text-cyan-400 drop-shadow-md" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Rainbow with Fluffy Clouds at bottom right -->
+                        <div class="absolute -bottom-2 right-2 z-20 flex flex-col items-center">
+                            <!-- Rainbow Arcs -->
+                            <div class="relative w-32 h-16 overflow-hidden mb-[-8px]">
+                                <div class="absolute inset-0 rounded-t-full border-[7px] border-red-500 border-b-0"></div>
+                                <div class="absolute inset-[7px] rounded-t-full border-[7px] border-yellow-400 border-b-0"></div>
+                                <div class="absolute inset-[14px] rounded-t-full border-[7px] border-cyan-400 border-b-0"></div>
+                            </div>
+                            <!-- Fluffy White Clouds -->
+                            <div class="flex items-center -space-x-2">
+                                <div class="w-8 h-8 rounded-full bg-white shadow-sm"></div>
+                                <div class="w-10 h-10 rounded-full bg-white shadow-sm -mt-2"></div>
+                                <div class="w-9 h-9 rounded-full bg-white shadow-sm"></div>
+                                <div class="w-7 h-7 rounded-full bg-white shadow-sm -ml-2"></div>
+                            </div>
+                        </div>
+
+                        <!-- Hero Jumping Girl Cutout (Clean AI segmented PNG) -->
+                        <div class="relative z-10 w-full h-full flex items-center justify-center pointer-events-none">
+                            <img src="assets/images/hero_jumping_girl.png" alt="Happy school girl jumping" class="w-[92%] h-[92%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== WAVE DIVIDER 1: HERO TO STATS ==================== -->
+        <div class="wave-divider w-full">
+            <svg class="w-full h-16 sm:h-20 text-white fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,50 C280,110 520,10 800,65 C1080,120 1280,30 1440,60 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== STATS / UNIQUE SECTION ==================== -->
+    <section id="stats-section" class="bg-white relative z-20 pt-4 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                
+                <!-- Left: Pointing Boy & Headline with organic container -->
+                <div class="flex items-center space-x-6 sm:space-x-8">
+                    <!-- Pointing boy image cutout -->
+                    <div class="w-24 h-28 sm:w-28 sm:h-32 flex-shrink-0 relative">
+                        <img src="assets/images/pointing_boy.png" alt="Preschool boy pointing up" class="w-full h-full object-contain">
+                    </div>
+                    <!-- Heading -->
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading leading-tight">
+                            Every Child is <br>
+                            <span class="text-slate-900">Unique &amp;</span> <span class="text-kiddy-purple">Special</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Right: 4 Stat Counters in Organic Rounded Cards -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full lg:w-auto">
+                    <!-- Stat 1 -->
+                    <div class="stat-organic-box bg-purple-50/70 border border-purple-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group">
+                        <div class="w-10 h-10 rounded-2xl bg-purple-200/70 text-kiddy-purple flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-shapes text-lg"></i>
+                        </div>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading stat-count" data-target="12" data-suffix="+">12+</span>
+                        <span class="text-xs text-slate-500 font-medium">Years of Excellence</span>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="stat-organic-box bg-cyan-50/70 border border-cyan-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group">
+                        <div class="w-10 h-10 rounded-2xl bg-cyan-200/70 text-cyan-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-chalkboard-user text-lg"></i>
+                        </div>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading stat-count" data-target="200" data-suffix="+">200+</span>
+                        <span class="text-xs text-slate-500 font-medium">Expert Teachers</span>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="stat-organic-box bg-emerald-50/70 border border-emerald-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group">
+                        <div class="w-10 h-10 rounded-2xl bg-emerald-200/70 text-emerald-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-face-smile text-lg"></i>
+                        </div>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading stat-count" data-target="5" data-suffix="K+">5K+</span>
+                        <span class="text-xs text-slate-500 font-medium">Happy Students</span>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="stat-organic-box bg-amber-50/70 border border-amber-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group">
+                        <div class="w-10 h-10 rounded-2xl bg-amber-200/70 text-amber-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-trophy text-lg"></i>
+                        </div>
+                        <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading stat-count" data-target="10" data-suffix="+">10+</span>
+                        <span class="text-xs text-slate-500 font-medium">Awards Won</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OUR PROGRAMS SECTION ==================== -->
+    <section id="programs-section" class="pt-4 pb-0 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Programs Header + 6 Program Cards -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Section Title -->
+                    <div>
+                        <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-kiddy-yellow"></span>
+                            <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Age-Appropriate Stages</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+                            Our Programs
+                        </h2>
+                    </div>
+
+                    <!-- 6 Program Cards Grid with Organic Shapes & Pastel Accents -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <!-- 1. Play Group -->
+                        <div class="program-organic-card bg-orange-50/60 border border-orange-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-orange-400 group">
+                            <div class="w-12 h-12 rounded-2xl bg-orange-100 text-orange-500 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 font-heading text-base group-hover:text-orange-600 transition-colors">Play Group</h3>
+                                <p class="text-xs text-slate-500 font-medium">(2 - 3 Years)</p>
+                            </div>
+                        </div>
+
+                        <!-- 2. Kindergarten -->
+                        <div class="program-organic-card bg-emerald-50/60 border border-emerald-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-emerald-400 group">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 font-heading text-base group-hover:text-emerald-600 transition-colors">Kindergarten</h3>
+                                <p class="text-xs text-slate-500 font-medium">(5 - 6 Years)</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Pre Nursery -->
+                        <div class="program-organic-card bg-amber-50/60 border border-amber-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-amber-400 group">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-500 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
+                                <i class="fa-solid fa-puzzle-piece"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 font-heading text-base group-hover:text-amber-600 transition-colors">Pre Nursery</h3>
+                                <p class="text-xs text-slate-500 font-medium">(3 - 4 Years)</p>
+                            </div>
+                        </div>
+
+                        <!-- 4. Afterschool Care -->
+                        <div class="program-organic-card bg-sky-50/60 border border-sky-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-sky-400 group">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-500 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 font-heading text-base group-hover:text-sky-600 transition-colors">Afterschool Care</h3>
+                                <p class="text-xs text-slate-500 font-medium">(6 - 12 Years)</p>
+                            </div>
+                        </div>
+
+                        <!-- 5. Nursery -->
+                        <div class="program-organic-card bg-purple-50/60 border border-purple-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-purple-400 group">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-100 text-kiddy-purple flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 font-heading text-base group-hover:text-kiddy-purple transition-colors">Nursery</h3>
+                                <p class="text-xs text-slate-500 font-medium">(4 - 5 Years)</p>
+                            </div>
+                        </div>
+
+                        <!-- 6. Summer Camp -->
+                        <div class="program-organic-card bg-yellow-50/60 border border-yellow-200/70 p-4 flex items-center space-x-4 cursor-pointer hover:border-yellow-400 group">
+                            <div class="w-12 h-12 rounded-2xl bg-yellow-100 text-amber-500 flex items-center justify-center flex-shrink-0 text-xl group-hover:scale-110 transition-transform shadow-sm">
+                                <i class="fa-solid fa-campground"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 font-heading text-base group-hover:text-amber-600 transition-colors">Summer Camp</h3>
+                                <p class="text-xs text-slate-500 font-medium">(3 - 12 Years)</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Button: Explore All Programs -->
+                    <div class="pt-2">
+                        <button class="btn-enroll bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-7 py-3.5 rounded-full shadow-md hover:shadow-purple-700/30 transition-all text-sm flex items-center space-x-2">
+                            <span>Explore All Programs</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: "Learning is Fun & Engaging" Soft Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-kiddy-peach rounded-[32px] p-6 sm:p-8 border-2 border-orange-100 shadow-sm relative overflow-hidden">
+                        
+                        <div class="flex flex-col space-y-4 mb-6">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading leading-tight">
+                                        Learning is <br>
+                                        <span class="text-kiddy-purple">Fun &amp; Engaging</span>
+                                    </h3>
+                                </div>
+                                <button class="btn-enroll w-11 h-11 rounded-full bg-kiddy-purple text-white flex items-center justify-center hover:bg-kiddy-purpleDark hover:scale-105 transition-all shadow-md flex-shrink-0">
+                                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                                </button>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal max-w-sm">
+                                Our activities are designed to inspire creativity and curiosity in every child.
+                            </p>
+                        </div>
+
+                        <!-- Classroom Photo with Rounded Corner cutout -->
+                        <div class="rounded-2xl overflow-hidden shadow-md">
+                            <img src="assets/images/kids_coloring.jpg" alt="Children engaged in fun learning and coloring" class="w-full h-56 sm:h-64 object-cover transform hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ==================== WAVE DIVIDER 2: PROGRAMS TO WHY CHOOSE US ==================== -->
+        <div class="wave-divider w-full mt-10">
+            <svg class="w-full h-16 sm:h-24 text-kiddy-purple fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C240,15 480,105 720,45 C960,-15 1200,95 1440,35 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US? SECTION (Wavy Purple) ==================== -->
+    <section id="why-choose-us" class="bg-kiddy-purple text-white relative pt-4 pb-0 overflow-hidden">
+
+        <!-- Floating playful elements (Rocket + trails + doodles) -->
+        <div class="absolute inset-0 pointer-events-none select-none opacity-40">
+            <!-- Rocket flying on right -->
+            <div class="absolute top-16 right-12 lg:right-24 text-center animate-rocket">
+                <div class="w-14 h-14 bg-pink-500/20 border-2 border-pink-400 rounded-full flex items-center justify-center text-pink-300 text-2xl shadow-lg">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <!-- Rocket trail curve -->
+                <svg class="w-32 h-32 -mt-4 text-purple-300/40" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" viewBox="0 0 100 100">
+                    <path d="M 50 10 C 20 50, 80 80, 10 95" />
+                </svg>
+            </div>
+            <!-- Stars -->
+            <i class="fa-solid fa-star absolute top-20 left-16 text-yellow-300 text-sm animate-twinkle"></i>
+            <i class="fa-solid fa-star absolute bottom-24 right-1/3 text-purple-300 text-xs animate-twinkle"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Jumping Boy with Arch/Ring -->
+                <div class="lg:col-span-5 flex justify-center items-center">
+                    <div class="relative w-72 h-72 sm:w-88 sm:h-88 flex items-center justify-center">
+                        
+                        <!-- Circular Green/Cyan Arch ring -->
+                        <div class="absolute inset-4 rounded-full border-4 border-emerald-400/80 bg-emerald-500/10 shadow-inner"></div>
+                        <div class="absolute inset-8 rounded-full border-2 border-dashed border-cyan-300/50"></div>
+                        
+                        <!-- Boy Jumping Arms Spread -->
+                        <div class="relative z-10 w-full h-full flex items-center justify-center pointer-events-none">
+                            <img src="assets/images/jumping_boy_arms.png" alt="Happy student jumping with arms raised" class="w-[95%] h-[95%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Why Choose Us Content & 4 Translucent Feature Cards -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full mb-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-kiddy-yellow"></span>
+                            <span class="text-xs font-bold tracking-wider text-purple-200 uppercase">Our Core Strengths</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+                            Why Choose Us?
+                        </h2>
+                    </div>
+
+                    <!-- 4 Feature Cards Grid with Organic Frosted Glass -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <!-- Card 1 -->
+                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-orange-500/25 border border-orange-400/40 text-orange-400 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
+                                <i class="fa-solid fa-book-bookmark"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm sm:text-base font-heading">Modern Curriculum</h3>
+                                <p class="text-xs text-purple-200">Interactive &amp; Creative</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-pink-500/25 border border-pink-400/40 text-pink-400 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm sm:text-base font-heading">Safe &amp; Secure</h3>
+                                <p class="text-xs text-purple-200">24/7 CCTV &amp; Security</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-500/25 border border-blue-400/40 text-blue-400 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm sm:text-base font-heading">Afterschool Care</h3>
+                                <p class="text-xs text-purple-200">(6 - 12 Years)</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="why-organic-card bg-white/10 border border-white/15 p-4 backdrop-blur-sm flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/25 border border-teal-400/40 text-teal-300 flex items-center justify-center flex-shrink-0 text-xl shadow-sm">
+                                <i class="fa-solid fa-apple-whole"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm sm:text-base font-heading">Nutritious Meals</h3>
+                                <p class="text-xs text-purple-200">Healthy &amp; Balanced</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Button: Learn More -->
+                    <div class="pt-2">
+                        <button class="btn-tour bg-white hover:bg-slate-100 text-kiddy-purpleDark font-bold px-8 py-3.5 rounded-full shadow-lg transition-all text-sm flex items-center space-x-2">
+                            <span>Learn More</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== WAVE DIVIDER 3: WHY CHOOSE US TO HOLISTIC (CLOUDS) ==================== -->
+        <div class="wave-divider w-full">
+            <svg class="w-full h-16 sm:h-20 text-white fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,32L40,42.7C80,53,160,75,240,80C320,85,400,75,480,58.7C560,43,640,21,720,26.7C800,32,880,64,960,69.3C1040,75,1120,53,1200,48C1280,43,1360,53,1400,58.7L1440,64L1440,120L1400,120C1360,120,1280,120,1200,120C1120,120,1040,120,960,120C880,120,800,120,720,120C640,120,560,120,480,120C400,120,320,120,240,120C160,120,80,120,40,120L0,120Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== HOLISTIC DEVELOPMENT SECTION ==================== -->
+    <section id="holistic-section" class="bg-white pt-8 pb-0 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Holistic Development Text & 4 Checkmarks -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Nurturing All Dimensions</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading leading-tight">
+                        Holistic Development <br>
+                        <span class="text-slate-900">for a</span> <span class="text-kiddy-purple">Better Future</span>
+                    </h2>
+
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+                        We focus on the overall development of children - physical, emotional, social and cognitive.
+                    </p>
+
+                    <!-- 4 Checkmark Items in Soft Pill Containers -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <!-- 1. Physical Growth -->
+                        <div class="flex items-center space-x-3 bg-slate-50/80 border border-slate-200/80 rounded-2xl p-3 hover:bg-emerald-50/50 hover:border-emerald-200 transition-colors">
+                            <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs flex-shrink-0 shadow-sm">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-sm font-bold text-slate-700">Physical Growth</span>
+                        </div>
+
+                        <!-- 2. Social Skills -->
+                        <div class="flex items-center space-x-3 bg-slate-50/80 border border-slate-200/80 rounded-2xl p-3 hover:bg-emerald-50/50 hover:border-emerald-200 transition-colors">
+                            <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs flex-shrink-0 shadow-sm">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-sm font-bold text-slate-700">Social Skills</span>
+                        </div>
+
+                        <!-- 3. Emotional Well-being -->
+                        <div class="flex items-center space-x-3 bg-slate-50/80 border border-slate-200/80 rounded-2xl p-3 hover:bg-emerald-50/50 hover:border-emerald-200 transition-colors">
+                            <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs flex-shrink-0 shadow-sm">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-sm font-bold text-slate-700">Emotional Well-being</span>
+                        </div>
+
+                        <!-- 4. Cognitive Skills -->
+                        <div class="flex items-center space-x-3 bg-slate-50/80 border border-slate-200/80 rounded-2xl p-3 hover:bg-emerald-50/50 hover:border-emerald-200 transition-colors">
+                            <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs flex-shrink-0 shadow-sm">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="text-sm font-bold text-slate-700">Cognitive Skills</span>
+                        </div>
+                    </div>
+
+                    <!-- Button: Read More -->
+                    <div class="pt-4">
+                        <button class="btn-tour bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-8 py-3.5 rounded-full shadow-md transition-all text-sm flex items-center space-x-2">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Cute Standing Schoolgirl cutout with globe outline -->
+                <div class="lg:col-span-5 flex justify-center items-center relative">
+                    <!-- Wireframe globe in background -->
+                    <div class="absolute -right-4 top-1/2 -translate-y-1/2 opacity-25 pointer-events-none">
+                        <svg class="w-48 h-48 text-kiddy-purple" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Standing Girl Image (Clean AI segmented PNG) -->
+                    <div class="relative z-10 w-64 sm:w-72 h-80 sm:h-96 flex items-end justify-center">
+                        <img src="assets/images/standing_girl.png" alt="Cute school girl with backpack standing" class="w-full h-full object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== WAVE DIVIDER 4: ROLLING GREEN GRASS HILL (The User's Favorite!) ==================== -->
+        <div class="wave-divider w-full relative">
+            <svg class="w-full h-14 sm:h-20 text-emerald-400 fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C240,10 520,105 800,35 C1080,-25 1280,85 1440,50 L1440,120 L0,120 Z"></path>
+            </svg>
+            
+            <!-- Sprouting nature icons along the wavy crest (as loved by the user) -->
+            <div class="absolute top-2 left-1/4 text-emerald-700 opacity-80 text-sm animate-sprout">
+                <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="absolute top-3 left-1/2 text-emerald-700 opacity-80 text-sm animate-sprout" style="animation-delay: 1.2s;">
+                <i class="fa-solid fa-clover"></i>
+            </div>
+            <div class="absolute top-2 right-1/4 text-emerald-700 opacity-80 text-sm animate-sprout" style="animation-delay: 0.6s;">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+        </div>
+
+        <!-- Green Meadow Container with Announcement Bar -->
+        <div class="relative bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 pt-2 pb-0">
+            <!-- Mint Green Floating Announcement Bar -->
+            <div class="max-w-4xl mx-auto px-4 relative z-20 pb-8">
+                <div class="bg-white/95 border-2 border-emerald-200/90 rounded-full py-3.5 px-6 sm:px-8 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 backdrop-blur-sm">
+                    
+                    <div class="flex items-center space-x-3 text-center sm:text-left">
+                        <div class="w-11 h-11 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 text-lg shadow-sm">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-slate-900 font-extrabold text-sm sm:text-base font-heading">
+                                Admissions Open for 2025-26
+                            </h4>
+                            <p class="text-xs text-slate-500 font-normal">
+                                Limited seats available! Secure your child's future today.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-enroll bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-7 py-3 rounded-full shadow-md transition-all text-xs sm:text-sm flex items-center space-x-2 flex-shrink-0 hover:scale-105">
+                        <span>Enroll Now</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- WAVE DIVIDER 5: GREEN MEADOW TO GALLERY (WAVE TO WHITE) -->
+            <div class="wave-divider w-full">
+                <svg class="w-full h-14 sm:h-20 text-white fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,40 C320,110 600,10 920,80 C1200,135 1350,30 1440,65 L1440,120 L0,120 Z"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== OUR GALLERY SECTION ==================== -->
+    <section id="gallery-section" class="pt-8 pb-0 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Heading & Controls -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+                    <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Campus Life &amp; Moments</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+                    Our Gallery
+                </h2>
+            </div>
+
+            <!-- Gallery Slider Wrapper with Navigation Arrows -->
+            <div class="relative flex items-center">
+                <!-- Left Nav Arrow -->
+                <button id="gallery-prev" aria-label="Previous photos" class="absolute -left-3 sm:-left-6 z-20 w-11 h-11 rounded-full bg-kiddy-purple text-white shadow-lg flex items-center justify-center hover:bg-kiddy-purpleDark hover:scale-110 transition-all">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+
+                <!-- 5 Gallery Images Slider with Organic Rounded Frames -->
+                <div id="gallery-slider" class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth no-scrollbar py-2 px-2 w-full">
+                    
+                    <!-- 1. Heart Sign Girl -->
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                        <img src="assets/images/gallery_heart_girl.jpg" alt="Child making heart with hands" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+                            <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Clay/Playdough Toddler -->
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                        <img src="assets/images/gallery_playdough.jpg" alt="Toddler playing with play dough" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+                            <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Painting Kids -->
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                        <img src="assets/images/gallery_painting.jpg" alt="Kids finger painting in art class" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+                            <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Science Discovery -->
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                        <img src="assets/images/gallery_science.jpg" alt="Students observing plants with magnifying glass" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+                            <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- 5. Playground Slide -->
+                    <div class="gallery-card flex-shrink-0 w-52 sm:w-60 h-64 sm:h-72 overflow-hidden cursor-pointer shadow-sm border-2 border-slate-100 group relative">
+                        <img src="assets/images/gallery_slide.jpg" alt="Happy kid sliding on indoor slide" class="gallery-thumb w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-kiddy-purple/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[2px]">
+                            <span class="w-10 h-10 rounded-full bg-white text-kiddy-purple flex items-center justify-center shadow-lg"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Nav Arrow -->
+                <button id="gallery-next" aria-label="Next photos" class="absolute -right-3 sm:-right-6 z-20 w-11 h-11 rounded-full bg-kiddy-purple text-white shadow-lg flex items-center justify-center hover:bg-kiddy-purpleDark hover:scale-110 transition-all">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ==================== WAVE DIVIDER 6: GALLERY TO TESTIMONIALS (PINK WAVE) ==================== -->
+        <div class="wave-divider w-full mt-10">
+            <svg class="w-full h-16 sm:h-22 text-kiddy-pink fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,65 C320,15 640,110 960,40 C1180,-10 1340,75 1440,55 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== WHAT PARENTS SAY ABOUT US (Magenta/Pink Banner) ==================== -->
+    <section id="testimonials-section" class="bg-kiddy-pink text-white pt-6 pb-0 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left: Mom Portrait + Heading + Stars -->
+                <div class="lg:col-span-5 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
+                    <!-- Photo of smiling mom with organic rounded frame -->
+                    <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-[28px] overflow-hidden border-4 border-white/40 shadow-xl flex-shrink-0">
+                        <img src="assets/images/parent_smiling.jpg" alt="Parent Priya Sharma" class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="space-y-2">
+                        <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white leading-tight">
+                            What Parents <br>
+                            Say About Us
+                        </h3>
+                        <!-- 5 Stars -->
+                        <div class="flex items-center space-x-1 text-yellow-300 text-lg">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Testimonial Quote + Next Button -->
+                <div class="lg:col-span-7 flex items-center justify-between gap-6 pl-0 lg:pl-6 bg-white/10 rounded-[28px] p-6 border border-white/20 backdrop-blur-sm">
+                    <div class="space-y-4 max-w-xl">
+                        <!-- Big quote marks -->
+                        <i class="fa-solid fa-quote-left text-3xl sm:text-4xl text-white/60"></i>
+                        <p id="testimonial-quote" class="text-lg sm:text-xl text-white font-medium italic transition-opacity duration-300 leading-relaxed">
+                            "KiddyLand has been a wonderful experience for our child. The teachers are caring and the activities are amazing!"
+                        </p>
+                        <div>
+                            <h4 id="testimonial-name" class="font-extrabold text-white text-base">Priya Sharma</h4>
+                            <p id="testimonial-role" class="text-xs text-pink-100">Parent</p>
+                        </div>
+                    </div>
+
+                    <!-- Right arrow next testimonial button -->
+                    <div class="flex flex-col items-center space-y-4 flex-shrink-0">
+                        <button id="testimonial-next" aria-label="Next review" class="w-12 h-12 rounded-full bg-white text-kiddy-pink flex items-center justify-center shadow-lg hover:bg-pink-50 hover:scale-110 transition-all">
+                            <i class="fa-solid fa-arrow-right text-base"></i>
+                        </button>
+                        <!-- Carousel Dots -->
+                        <div class="flex items-center space-x-1.5">
+                            <button class="testimonial-dot h-2.5 w-6 rounded-full bg-white transition-all" aria-label="Slide 1"></button>
+                            <button class="testimonial-dot h-2.5 w-2.5 rounded-full bg-white/40 transition-all" aria-label="Slide 2"></button>
+                            <button class="testimonial-dot h-2.5 w-2.5 rounded-full bg-white/40 transition-all" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== WAVE DIVIDER 7: TESTIMONIALS TO LATEST NEWS (PINK TO WHITE) ==================== -->
+        <div class="wave-divider w-full">
+            <svg class="w-full h-16 sm:h-22 text-white fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,50 C260,110 540,15 820,70 C1100,125 1300,25 1440,60 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== LATEST NEWS / BLOG SECTION ==================== -->
+    <section id="blog-section" class="pt-8 pb-0 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Heading -->
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                    <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Parenting Insights &amp; Updates</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+                    Latest News
+                </h2>
+            </div>
+
+            <!-- News Slider Wrapper with Navigation Arrows -->
+            <div class="relative flex items-center">
+                <!-- Prev Button -->
+                <button id="news-prev" aria-label="Previous articles" class="absolute -left-3 sm:-left-6 z-20 w-11 h-11 rounded-full bg-kiddy-purple text-white shadow-lg flex items-center justify-center hover:bg-kiddy-purpleDark hover:scale-110 transition-all">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+
+                <!-- 3 Blog Cards Container with Organic Styling -->
+                <div id="news-slider" class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto scroll-smooth no-scrollbar py-2 px-2 w-full">
+                    
+                    <!-- Blog Card 1 -->
+                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden h-48 bg-slate-100">
+                                <img src="assets/images/blog_play_learning.jpg" alt="Benefits of play-based learning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-full">Early Education</span>
+                                <h3 class="font-extrabold text-slate-900 text-lg font-heading group-hover:text-kiddy-purple transition-colors leading-snug mt-2">
+                                    Benefits of Play-Based Learning for Kids
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1 font-medium">May 15, 2025</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 mt-4">
+                            <a href="#blog-section" class="text-kiddy-purple hover:text-kiddy-purpleDark font-bold text-xs sm:text-sm flex items-center space-x-1.5 group-hover:translate-x-1 transition-transform">
+                                <span>Read More</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden h-48 bg-slate-100">
+                                <img src="assets/images/blog_healthy_habits.jpg" alt="Healthy habits for growing children" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">Health &amp; Nutrition</span>
+                                <h3 class="font-extrabold text-slate-900 text-lg font-heading group-hover:text-kiddy-purple transition-colors leading-snug mt-2">
+                                    Healthy Habits for Growing Children
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1 font-medium">May 14, 2025</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 mt-4">
+                            <a href="#blog-section" class="text-kiddy-purple hover:text-kiddy-purpleDark font-bold text-xs sm:text-sm flex items-center space-x-1.5 group-hover:translate-x-1 transition-transform">
+                                <span>Read More</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="blog-organic-card flex-shrink-0 w-80 md:w-auto bg-white border-2 border-slate-100 overflow-hidden shadow-sm p-4 flex flex-col justify-between group">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden h-48 bg-slate-100">
+                                <img src="assets/images/blog_preschool_choice.jpg" alt="How to choose the right preschool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-full">Parenting Guide</span>
+                                <h3 class="font-extrabold text-slate-900 text-lg font-heading group-hover:text-kiddy-purple transition-colors leading-snug mt-2">
+                                    How to Choose the Right Preschool
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1 font-medium">May 13, 2025</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 mt-4">
+                            <a href="#blog-section" class="text-kiddy-purple hover:text-kiddy-purpleDark font-bold text-xs sm:text-sm flex items-center space-x-1.5 group-hover:translate-x-1 transition-transform">
+                                <span>Read More</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Next Button -->
+                <button id="news-next" aria-label="Next articles" class="absolute -right-3 sm:-right-6 z-20 w-11 h-11 rounded-full bg-kiddy-purple text-white shadow-lg flex items-center justify-center hover:bg-kiddy-purpleDark hover:scale-110 transition-all">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ==================== WAVE DIVIDER 8: LATEST NEWS TO PRE-FOOTER (DEEP PURPLE WAVE) ==================== -->
+        <div class="wave-divider w-full mt-10">
+            <svg class="w-full h-16 sm:h-24 text-kiddy-purple fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C300,10 600,105 900,40 C1150,-15 1320,85 1440,50 L1440,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== PRE-FOOTER CTA & FOOTER ==================== -->
+    <div class="relative bg-kiddy-purple text-white pt-0 pb-12 overflow-hidden" id="footer-section">
+        
+        <!-- Background doodles & stars -->
+        <div class="absolute inset-0 pointer-events-none select-none opacity-25">
+            <i class="fa-solid fa-star absolute top-12 left-10 text-yellow-300 text-sm animate-twinkle"></i>
+            <i class="fa-solid fa-star absolute bottom-12 right-20 text-yellow-300 text-xs animate-twinkle"></i>
+            <i class="fa-solid fa-sparkles absolute top-1/2 right-10 text-white text-base"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- OVERLAPPING YELLOW CAPSULE CTA BANNER WITH TELESCOPE BOY (Seamlessly resting on purple footer) -->
+            <div class="relative -mt-14 sm:-mt-16 mb-16 flex flex-col md:flex-row items-center justify-between">
+                
+                <!-- Boy with telescope sitting on the left (Clean AI segmented PNG) -->
+                <div class="w-52 sm:w-64 h-52 sm:h-64 flex-shrink-0 z-20 -mb-6 md:mb-0 md:-mr-12">
+                    <img src="assets/images/boy_telescope.png" alt="Curious boy looking through toy spyglass telescope" class="w-full h-full object-contain drop-shadow-2xl">
+                </div>
+
+                <!-- Big Golden-Yellow Pill / Capsule Banner with Organic Curves -->
+                <div class="w-full bg-gradient-to-r from-amber-400 via-kiddy-yellow to-yellow-400 text-slate-900 rounded-full px-6 sm:px-12 py-5 sm:py-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4 relative z-10 border-4 border-yellow-200/60">
+                    
+                    <!-- White Star Accent on Top Left of Banner -->
+                    <div class="absolute -top-3 left-8 w-8 h-8 rounded-full bg-white text-yellow-500 flex items-center justify-center shadow-md text-sm">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <!-- Text inside banner -->
+                    <div class="text-center md:text-left pl-0 md:pl-6">
+                        <h3 class="text-xl sm:text-2xl lg:text-3xl font-extrabold font-heading text-slate-950 tracking-tight">
+                            Let's Build Their Bright Future Together!
+                        </h3>
+                        <p class="text-xs sm:text-sm font-semibold text-kiddy-purpleDark mt-0.5">
+                            <span class="italic font-bold">Admission</span> Open – Enroll Now!
+                        </p>
+                    </div>
+
+                    <!-- Right Purple Button -->
+                    <button class="btn-enroll bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-8 py-3 rounded-full shadow-lg transition-all text-xs sm:text-sm flex items-center space-x-2 flex-shrink-0 hover:scale-105">
+                        <span>Enroll Now</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- FOOTER 4-COLUMN LINKS & INFO -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-purple-800/80">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="flex items-center space-x-2.5">
+                        <div class="w-9 h-9 rounded-full bg-kiddy-yellow text-kiddy-purple flex items-center justify-center shadow-md">
+                            <i class="fa-solid fa-star text-lg text-yellow-900"></i>
+                        </div>
+                        <span class="text-2xl font-extrabold tracking-tight font-heading text-white">Kiddy<span class="text-kiddy-yellow">Land</span></span>
+                    </div>
+                    <p class="text-xs text-purple-200 tracking-wider font-semibold">
+                        Learn. Grow. Shine.
+                    </p>
+                    <p class="text-xs text-purple-300 leading-relaxed max-w-sm">
+                        Empowering young learners through progressive curriculum, empathetic educators, and a playful community environment.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="font-bold text-white text-sm font-heading tracking-wide">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-purple-200">
+                        <li><a href="#hero" class="hover:text-kiddy-yellow transition-colors">About Us</a></li>
+                        <li><a href="#programs-section" class="hover:text-kiddy-yellow transition-colors">Programs</a></li>
+                        <li><a href="#holistic-section" class="hover:text-kiddy-yellow transition-colors">Admissions</a></li>
+                        <li><a href="#blog-section" class="hover:text-kiddy-yellow transition-colors">Blog</a></li>
+                        <li><a href="#footer-section" class="hover:text-kiddy-yellow transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Programs -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="font-bold text-white text-sm font-heading tracking-wide">Programs</h4>
+                    <ul class="space-y-2 text-xs text-purple-200">
+                        <li><a href="#programs-section" class="hover:text-kiddy-yellow transition-colors">Play Group</a></li>
+                        <li><a href="#programs-section" class="hover:text-kiddy-yellow transition-colors">Nursery</a></li>
+                        <li><a href="#programs-section" class="hover:text-kiddy-yellow transition-colors">Kindergarten</a></li>
+                        <li><a href="#programs-section" class="hover:text-kiddy-yellow transition-colors">Afterschool Care</a></li>
+                        <li><a href="#programs-section" class="hover:text-kiddy-yellow transition-colors">Summer Camp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Resources -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="font-bold text-white text-sm font-heading tracking-wide">Resources</h4>
+                    <ul class="space-y-2 text-xs text-purple-200">
+                        <li><a href="#testimonials-section" class="hover:text-kiddy-yellow transition-colors">Parent Guide</a></li>
+                        <li><a href="#why-choose-us" class="hover:text-kiddy-yellow transition-colors">FAQs</a></li>
+                        <li><a href="#gallery-section" class="hover:text-kiddy-yellow transition-colors">Gallery</a></li>
+                        <li><a href="#blog-section" class="hover:text-kiddy-yellow transition-colors">Events</a></li>
+                        <li><a href="#footer-section" class="hover:text-kiddy-yellow transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 5: Contact Us -->
+                <div class="lg:col-span-2 space-y-3">
+                    <h4 class="font-bold text-white text-sm font-heading tracking-wide">Contact Us</h4>
+                    <ul class="space-y-2.5 text-xs text-purple-200">
+                        <li class="flex items-start space-x-2">
+                            <i class="fa-solid fa-location-dot mt-0.5 text-kiddy-yellow"></i>
+                            <span>123, Sunshine Street, Happy Town, NY 12345</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fa-solid fa-phone text-kiddy-yellow"></i>
+                            <span>+1 (212) 456-7890</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fa-solid fa-envelope text-kiddy-yellow"></i>
+                            <span>info@kiddyland.com</span>
+                        </li>
+                    </ul>
+
+                    <!-- Social Icons -->
+                    <div class="flex items-center space-x-2.5 pt-2">
+                        <a href="https://facebook.com" target="_blank" rel="noreferrer" class="w-8 h-8 rounded-full bg-purple-900/80 hover:bg-kiddy-yellow hover:text-kiddy-purple flex items-center justify-center text-xs transition-colors" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noreferrer" class="w-8 h-8 rounded-full bg-purple-900/80 hover:bg-kiddy-yellow hover:text-kiddy-purple flex items-center justify-center text-xs transition-colors" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noreferrer" class="w-8 h-8 rounded-full bg-purple-900/80 hover:bg-kiddy-yellow hover:text-kiddy-purple flex items-center justify-center text-xs transition-colors" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noreferrer" class="w-8 h-8 rounded-full bg-purple-900/80 hover:bg-kiddy-yellow hover:text-kiddy-purple flex items-center justify-center text-xs transition-colors" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT BAR -->
+            <div class="pt-6 text-center text-xs text-purple-300">
+                <p>&copy; 2025 KiddyLand. All rights reserved.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==================== ENROLLMENT MODAL ==================== -->
+    <div id="enroll-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative transform transition-all border-4 border-yellow-300">
+            <!-- Close Button -->
+            <button id="enroll-close-btn" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center text-sm transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Title -->
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-yellow-100 text-amber-600 flex items-center justify-center mx-auto mb-2 text-xl">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-slate-900 font-heading">Enroll at KiddyLand</h3>
+                <p class="text-xs text-slate-500 mt-1">Begin your child's magical learning adventure with us!</p>
+            </div>
+
+            <!-- Form -->
+            <form id="enrollment-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1" for="child-name">Child's Full Name *</label>
+                        <input type="text" id="child-name" required placeholder="e.g. Leo Smith" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-kiddy-purple">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1" for="child-age">Child's Age *</label>
+                        <select id="child-age" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-kiddy-purple">
+                            <option value="">Select Age</option>
+                            <option value="2">2 Years</option>
+                            <option value="3">3 Years</option>
+                            <option value="4">4 Years</option>
+                            <option value="5">5 Years</option>
+                            <option value="6+">6+ Years</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1" for="parent-name">Parent / Guardian Name *</label>
+                        <input type="text" id="parent-name" required placeholder="e.g. Sarah Smith" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-kiddy-purple">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1" for="parent-phone">Phone Number *</label>
+                        <input type="tel" id="parent-phone" required placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-kiddy-purple">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1" for="program-select">Preferred Program *</label>
+                    <select id="program-select" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-kiddy-purple">
+                        <option value="Play Group">Play Group (2 - 3 Years)</option>
+                        <option value="Pre Nursery">Pre Nursery (3 - 4 Years)</option>
+                        <option value="Nursery">Nursery (4 - 5 Years)</option>
+                        <option value="Kindergarten">Kindergarten (5 - 6 Years)</option>
+                        <option value="Afterschool Care">Afterschool Care (6 - 12 Years)</option>
+                        <option value="Summer Camp">Summer Camp (3 - 12 Years)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1" for="parent-notes">Additional Questions / Notes</label>
+                    <textarea id="parent-notes" rows="2" placeholder="Tell us anything about your child..." class="w-full px-3.5 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-kiddy-purple"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold py-3.5 rounded-xl shadow-lg transition-all text-sm tracking-wide flex items-center justify-center space-x-2">
+                        <span>Submit Admission Inquiry</span>
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== TOUR MODAL ==================== -->
+    <div id="tour-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border-4 border-purple-400 text-center">
+            <button id="tour-close-btn" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center text-sm transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="w-14 h-14 rounded-full bg-purple-100 text-kiddy-purple flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-video"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900 font-heading">KiddyLand Campus Virtual Tour</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-md mx-auto">
+                Explore our spacious classrooms, sensory play labs, outdoor adventure zones, and organic cafeteria!
+            </p>
+
+            <div class="my-6 rounded-2xl overflow-hidden aspect-video bg-slate-900 flex items-center justify-center relative shadow-inner">
+                <img src="assets/images/kids_coloring.jpg" alt="Campus video preview" class="w-full h-full object-cover opacity-60">
+                <button class="absolute w-16 h-16 rounded-full bg-kiddy-yellow text-kiddy-purpleDark flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-play pl-1"></i>
+                </button>
+            </div>
+
+            <button class="btn-enroll bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-8 py-3 rounded-full shadow text-sm">
+                Schedule an In-Person Campus Visit
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== LIGHTBOX MODAL ==================== -->
+    <div id="lightbox-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+        <div class="relative max-w-3xl w-full max-h-[85vh] flex items-center justify-center">
+            <button id="lightbox-close" class="absolute -top-12 right-0 text-white text-2xl hover:text-kiddy-yellow transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Enlarged gallery photo" class="max-w-full max-h-[80vh] rounded-2xl shadow-2xl object-contain border-2 border-white/20">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

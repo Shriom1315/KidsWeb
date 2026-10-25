@@ -1,0 +1,209 @@
+/* Custom Styles for KiddyLand Preschool */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-purple: #48239c;
+  --dark-purple: #351375;
+  --deep-purple: #230a52;
+  --accent-yellow: #fbb034;
+  --bright-yellow: #ffc107;
+  --accent-pink: #eb1b70;
+  --accent-green: #22c55e;
+  --light-green: #dcfce7;
+  --accent-cyan: #06b6d4;
+  --accent-orange: #f97316;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  color: #1e1b4b;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit', 'Fredoka', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6d28d9;
+}
+
+/* Hide scrollbar for carousel but keep functionality */
+#gallery-slider, #news-slider, .no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+#gallery-slider::-webkit-scrollbar, #news-slider::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Floating Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes rocketBob {
+  0%, 100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(42deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes sproutWiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-rocket {
+  animation: rocketBob 3.5s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-sprout {
+  animation: sproutWiggle 3s ease-in-out infinite;
+}
+
+/* Playful Organic Card and Container Styling */
+.organic-card {
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.organic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+.program-organic-card {
+  border-radius: 26px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(72, 35, 156, 0.05);
+}
+.program-organic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px -5px rgba(72, 35, 156, 0.12);
+}
+
+.stat-organic-box {
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+.stat-organic-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(72, 35, 156, 0.08);
+}
+
+.why-organic-card {
+  border-radius: 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.why-organic-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.gallery-card {
+  border-radius: 28px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gallery-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 30px -10px rgba(72, 35, 156, 0.15);
+}
+
+.blog-organic-card {
+  border-radius: 28px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 24px -4px rgba(72, 35, 156, 0.06);
+}
+.blog-organic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 32px -6px rgba(72, 35, 156, 0.12);
+}
+
+/* Wavy and organic shape dividers */
+.wave-divider {
+  line-height: 0 !important;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  margin-bottom: -1px;
+}
+.wave-divider svg {
+  display: block !important;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+/* Modal styles */
+.modal-overlay {
+  transition: opacity 0.3s ease-in-out;
+}
+.modal-content {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
