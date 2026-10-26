@@ -19,16 +19,20 @@
                 extend: {
                     colors: {
                         kiddy: {
-                            purple: '#49249e',
-                            purpleDark: '#351375',
-                            purpleDeep: '#230a52',
-                            yellow: '#fbb034',
-                            yellowLight: '#ffc107',
+                            purple: '#1e3a8a',
+                            purpleDark: '#172554',
+                            purpleDeep: '#0f172a',
+                            navy: '#1e3a8a',
+                            navyDark: '#172554',
+                            sky: '#0284c7',
+                            skyLight: '#e0f2fe',
+                            yellow: '#f59e0b',
+                            yellowLight: '#fbbf24',
                             pink: '#eb1b70',
                             pinkDark: '#c2185b',
-                            green: '#22c55e',
+                            green: '#10b981',
                             greenHill: '#4ade80',
-                            cyan: '#06b6d4',
+                            cyan: '#0284c7',
                             orange: '#f97316',
                             peach: '#fef8f0',
                         }
@@ -47,49 +51,49 @@
 <body class="bg-white text-slate-800 antialiased font-body selection:bg-kiddy-yellow selection:text-kiddy-purpleDark m-0 p-0">
 
     <!-- ==================== HEADER / NAVBAR ==================== -->
-    <header class="bg-kiddy-purple text-white relative z-40 sticky top-0 transition-all duration-300 shadow-md" id="main-nav">
+    <header class="bg-[#1e3a8a]/90 backdrop-blur-md text-white relative z-40 sticky top-0 transition-all duration-300 shadow-md" id="main-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center justify-between h-20 nav-container">
                 <!-- Brand Logo -->
                 <a href="#hero" class="flex items-center space-x-2.5 group">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 to-amber-300 flex items-center justify-center text-kiddy-purple shadow-md transform group-hover:rotate-12 transition-transform duration-300">
-                        <i class="fa-solid fa-star text-xl text-yellow-900"></i>
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-300 flex items-center justify-center text-blue-950 shadow-md transform group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fa-solid fa-star text-xl text-amber-950"></i>
                     </div>
-                    <span class="text-2xl font-extrabold tracking-tight font-heading text-white">Kiddy<span class="text-kiddy-yellow">Land</span></span>
+                    <span class="text-2xl font-extrabold tracking-tight font-heading text-white nav-logo-text">Kiddy<span class="text-amber-400">Land</span></span>
                 </a>
 
                 <!-- Desktop Navigation Menu -->
-                <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium text-purple-100">
-                    <a href="#hero" class="text-white hover:text-kiddy-yellow transition-colors font-semibold">Home</a>
-                    <a href="#stats-section" class="hover:text-kiddy-yellow transition-colors">About Us</a>
-                    <a href="#programs-section" class="hover:text-kiddy-yellow transition-colors">Programs</a>
-                    <a href="#holistic-section" class="hover:text-kiddy-yellow transition-colors">Admissions</a>
-                    <div class="relative group cursor-pointer py-2">
-                        <span class="hover:text-kiddy-yellow transition-colors flex items-center gap-1">
+                <nav class="hidden md:flex items-center space-x-8 text-[15px] font-medium text-blue-100">
+                    <a href="#hero" class="text-amber-400 font-semibold hover:text-amber-300 transition-colors nav-link active-link">Home</a>
+                    <a href="#stats-section" class="hover:text-amber-300 transition-colors nav-link">About Us</a>
+                    <a href="#programs-section" class="hover:text-amber-300 transition-colors nav-link">Programs</a>
+                    <a href="#holistic-section" class="hover:text-amber-300 transition-colors nav-link">Admissions</a>
+                    <div class="relative group cursor-pointer py-2 z-50">
+                        <span class="hover:text-amber-300 transition-colors flex items-center gap-1 nav-link">
                             Pages <i class="fa-solid fa-chevron-down text-xs opacity-70 group-hover:rotate-180 transition-transform"></i>
                         </span>
                         <!-- Dropdown Menu -->
-                        <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white text-slate-800 rounded-2xl shadow-xl py-2 z-50 border border-purple-100 animate-fadeIn">
-                            <a href="#gallery-section" class="block px-4 py-2 hover:bg-purple-50 hover:text-kiddy-purple text-sm">School Gallery</a>
-                            <a href="#why-choose-us" class="block px-4 py-2 hover:bg-purple-50 hover:text-kiddy-purple text-sm">Why Choose Us</a>
-                            <a href="#testimonials-section" class="block px-4 py-2 hover:bg-purple-50 hover:text-kiddy-purple text-sm">Parent Reviews</a>
-                            <a href="#blog-section" class="block px-4 py-2 hover:bg-purple-50 hover:text-kiddy-purple text-sm">Latest Articles</a>
+                        <div class="absolute left-0 top-full hidden group-hover:block w-48 bg-white text-slate-800 rounded-2xl shadow-xl py-2 z-[100] border border-blue-100 animate-fadeIn">
+                            <a href="#gallery-section" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-900 text-sm">School Gallery</a>
+                            <a href="#why-choose-us" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-900 text-sm">Why Choose Us</a>
+                            <a href="#testimonials-section" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-900 text-sm">Parent Reviews</a>
+                            <a href="#blog-section" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-900 text-sm">Latest Articles</a>
                         </div>
                     </div>
-                    <a href="#blog-section" class="hover:text-kiddy-yellow transition-colors">Blog</a>
-                    <a href="#footer-section" class="hover:text-kiddy-yellow transition-colors">Contact</a>
+                    <a href="#blog-section" class="hover:text-amber-300 transition-colors nav-link">Blog</a>
+                    <a href="#footer-section" class="hover:text-amber-300 transition-colors nav-link">Contact</a>
                 </nav>
 
                 <!-- Desktop Enroll Button -->
                 <div class="hidden md:block">
-                    <button class="btn-enroll bg-kiddy-yellow hover:bg-amber-400 text-kiddy-purpleDark font-bold px-7 py-2.5 rounded-full shadow-lg hover:shadow-yellow-400/30 transform hover:-translate-y-0.5 transition-all text-sm tracking-wide">
+                    <button class="btn-enroll bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-bold px-7 py-2.5 rounded-full shadow-lg hover:shadow-amber-400/30 transform hover:-translate-y-0.5 transition-all text-sm tracking-wide">
                         Enroll Now
                     </button>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-kiddy-yellow focus:outline-none p-2" aria-label="Toggle Navigation">
+                    <button id="mobile-menu-btn" class="text-white hover:text-amber-400 focus:outline-none p-2" aria-label="Toggle Navigation">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -97,154 +101,110 @@
         </div>
 
         <!-- Mobile Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-kiddy-purpleDark border-t border-purple-800 px-6 py-4 space-y-3">
-            <a href="#hero" class="block text-white font-medium py-1 hover:text-kiddy-yellow">Home</a>
-            <a href="#stats-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">About Us</a>
-            <a href="#programs-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Programs</a>
-            <a href="#holistic-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Admissions</a>
-            <a href="#gallery-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Gallery</a>
-            <a href="#blog-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Blog</a>
-            <a href="#footer-section" class="block text-purple-200 font-medium py-1 hover:text-kiddy-yellow">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#172554] border-t border-blue-900 px-6 py-4 space-y-3">
+            <a href="#hero" class="block text-amber-400 font-medium py-1 hover:text-amber-300">Home</a>
+            <a href="#stats-section" class="block text-blue-100 font-medium py-1 hover:text-amber-400">About Us</a>
+            <a href="#programs-section" class="block text-blue-100 font-medium py-1 hover:text-amber-400">Programs</a>
+            <a href="#holistic-section" class="block text-blue-100 font-medium py-1 hover:text-amber-400">Admissions</a>
+            <a href="#gallery-section" class="block text-blue-100 font-medium py-1 hover:text-amber-400">Gallery</a>
+            <a href="#blog-section" class="block text-blue-100 font-medium py-1 hover:text-amber-400">Blog</a>
+            <a href="#footer-section" class="block text-blue-100 font-medium py-1 hover:text-amber-400">Contact</a>
             <div class="pt-2">
-                <button class="btn-enroll w-full bg-kiddy-yellow text-kiddy-purpleDark font-bold py-2.5 rounded-full shadow text-sm">
+                <button class="btn-enroll w-full bg-gradient-to-r from-amber-400 to-yellow-400 text-slate-950 font-bold py-2.5 rounded-full shadow text-sm">
                     Enroll Now
                 </button>
             </div>
         </div>
-    </header>
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section id="hero" class="bg-kiddy-purple text-white relative pt-12 pb-0 overflow-hidden">
-        <!-- Floating playful doodles -->
-        <div class="absolute inset-0 pointer-events-none select-none overflow-hidden opacity-35">
-            <!-- Paper Plane Doodle -->
-            <svg class="absolute top-12 left-1/4 w-12 h-12 text-purple-300 animate-float" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 9-9 3-3 9-6-21z"/>
-            </svg>
-            <!-- Saturn Planet Outline -->
-            <svg class="absolute top-8 right-20 w-16 h-16 text-purple-300/60 animate-float" style="animation-delay: 1.5s;" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="6" />
-                <path d="M4 12c0-3.3 3.6-6 8-6s8 2.7 8 6-3.6 6-8 6-8-2.7-8-6z" transform="rotate(-20 12 12)" />
-            </svg>
-            <!-- Stars / Sparkles -->
-            <i class="fa-solid fa-star absolute top-1/3 left-10 text-yellow-300 text-sm animate-twinkle"></i>
-            <i class="fa-solid fa-sparkles absolute top-16 left-1/3 text-white text-lg animate-twinkle" style="animation-delay: 0.8s;"></i>
-            <i class="fa-solid fa-star absolute bottom-36 left-1/4 text-purple-300 text-xs animate-twinkle" style="animation-delay: 2s;"></i>
-            <i class="fa-solid fa-star absolute top-28 right-1/3 text-yellow-300 text-xs animate-twinkle" style="animation-delay: 1.2s;"></i>
-            <!-- Dotted flight trail curve -->
-            <svg class="absolute top-1/4 right-1/4 w-40 h-28 text-purple-300/30" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" viewBox="0 0 100 100">
-                <path d="M 10 90 Q 60 20 90 40" />
+        <!-- ==================== SOFT ROUNDED WAVE SCALLOP PATTERN ==================== -->
+        <div class="nav-zigzag-bunting">
+            <svg class="w-full h-full block" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="nav-bunting-zigzag" width="24" height="8" patternUnits="userSpaceOnUse">
+                        <path id="nav-scallop-path" d="M0,0 L0,8 C4.5,8 7.5,1 12,1 C16.5,1 19.5,8 24,8 L24,0 Z" fill="#1e3a8a" fill-opacity="0.92" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="8" fill="url(#nav-bunting-zigzag)" />
             </svg>
         </div>
+    </header>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Hero Text & CTA -->
-                <div class="lg:col-span-6 space-y-6 text-center lg:text-left" data-animate="fade-left">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] font-heading">
+    <!-- ==================== HERO SECTION (FULL BLEED) ==================== -->
+    <section id="hero" class="relative w-full overflow-hidden bg-sky-200">
+        
+        <!-- Full-bleed Panoramic Banner Container (Full Width & Viewport Height) -->
+        <div class="relative w-full min-h-[580px] lg:min-h-[calc(100vh-5rem)] flex items-center">
+            
+            <!-- Full Hero Banner Image spanning 100% width and height -->
+            <img src="assets/images/hero_banner.png" alt="KiddyLand Preschool Hero Banner" class="absolute inset-0 w-full h-full object-cover object-[78%_center] sm:object-center select-none pointer-events-none">
+
+            <!-- Content Overlay situated directly over the white cloud area -->
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-10 sm:py-16">
+                <div class="w-full sm:max-w-[72%] md:max-w-[62%] lg:max-w-[56%] xl:max-w-[53%] bg-white/75 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none rounded-3xl p-6 sm:p-0 shadow-sm sm:shadow-none" data-animate="fade-right">
+
+
+                    <!-- Main Heading -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 font-heading leading-[1.12] tracking-tight mb-3.5">
                         Bright Beginnings <br>
-                        Last a <span class="text-kiddy-yellow">Lifetime</span>
+                        Last a <span class="text-amber-500 drop-shadow-xs">Lifetime</span>
                     </h1>
 
-                    <p class="text-purple-200 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        Nurturing curious minds through creative learning and joyful experiences.
+                    <!-- Subtitle -->
+                    <p class="text-slate-600 text-xs sm:text-sm lg:text-base font-normal leading-relaxed max-w-lg mb-6">
+                        Nurturing curious minds through creative learning, holistic care, and joyful early childhood education.
                     </p>
 
-                    <!-- Buttons Row -->
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <button class="btn-enroll bg-kiddy-yellow hover:bg-amber-400 text-kiddy-purpleDark font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-yellow-400/40 transform hover:-translate-y-0.5 transition-all text-sm flex items-center space-x-2">
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-3.5 mb-6">
+                        <button class="btn-enroll bg-gradient-to-r from-amber-400 via-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-extrabold px-8 py-3.5 rounded-full shadow-lg hover:shadow-amber-400/40 transform hover:-translate-y-0.5 transition-all text-sm flex items-center space-x-2">
                             <span>Enroll Now</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
-                        <button class="btn-tour bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm font-semibold px-7 py-3.5 rounded-full transition-all text-sm flex items-center space-x-2.5">
+                        <button class="btn-tour bg-white hover:bg-sky-50 text-blue-900 border-2 border-blue-200/90 font-bold px-7 py-3.5 rounded-full transition-all text-sm flex items-center space-x-2 shadow-sm hover:border-blue-300">
                             <span>Take a Tour</span>
-                            <span class="w-5 h-5 rounded-full bg-white text-kiddy-purple flex items-center justify-center text-[10px] pl-0.5">▶</span>
+                            <span class="w-5 h-5 rounded-full bg-blue-700 text-white flex items-center justify-center text-[9px] pl-0.5">▶</span>
                         </button>
                     </div>
 
-                    <!-- Feature Pills / Badges -->
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-6">
-                        <!-- Safe Environment -->
-                        <div class="flex items-center space-x-2 bg-purple-900/50 border border-purple-400/25 px-4 py-2 rounded-full backdrop-blur-sm shadow-sm hover:border-green-400 transition-colors">
-                            <span class="w-6 h-6 rounded-full bg-green-500/25 border border-green-400 flex items-center justify-center text-green-300 text-xs">
+                    <!-- 3 Trust Badges -->
+                    <div class="flex flex-wrap items-center gap-2 xl:gap-3">
+                        <div class="flex items-center space-x-2 bg-emerald-50/95 border border-emerald-200/80 px-3.5 py-1.5 rounded-full shadow-2xs">
+                            <span class="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px]">
                                 <i class="fa-solid fa-shield-halved"></i>
                             </span>
-                            <span class="text-xs sm:text-sm font-medium text-purple-100">Safe Environment</span>
+                            <span class="text-xs font-semibold text-emerald-950">Safe Environment</span>
                         </div>
-                        <!-- Expert Teachers -->
-                        <div class="flex items-center space-x-2 bg-purple-900/50 border border-purple-400/25 px-4 py-2 rounded-full backdrop-blur-sm shadow-sm hover:border-cyan-400 transition-colors">
-                            <span class="w-6 h-6 rounded-full bg-cyan-500/25 border border-cyan-400 flex items-center justify-center text-cyan-300 text-xs">
+                        <div class="flex items-center space-x-2 bg-sky-50/95 border border-sky-200/80 px-3.5 py-1.5 rounded-full shadow-2xs">
+                            <span class="w-5 h-5 rounded-full bg-sky-600 text-white flex items-center justify-center text-[10px]">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </span>
-                            <span class="text-xs sm:text-sm font-medium text-purple-100">Expert Teachers</span>
+                            <span class="text-xs font-semibold text-sky-950">Expert Teachers</span>
                         </div>
-                        <!-- Fun Activities -->
-                        <div class="flex items-center space-x-2 bg-purple-900/50 border border-purple-400/25 px-4 py-2 rounded-full backdrop-blur-sm shadow-sm hover:border-pink-400 transition-colors">
-                            <span class="w-6 h-6 rounded-full bg-pink-500/25 border border-pink-400 flex items-center justify-center text-pink-300 text-xs">
+                        <div class="flex items-center space-x-2 bg-amber-50/95 border border-amber-200/80 px-3.5 py-1.5 rounded-full shadow-2xs">
+                            <span class="w-5 h-5 rounded-full bg-amber-500 text-white flex items-center justify-center text-[10px]">
                                 <i class="fa-solid fa-shapes"></i>
                             </span>
-                            <span class="text-xs sm:text-sm font-medium text-purple-100">Fun Activities</span>
+                            <span class="text-xs font-semibold text-amber-950">Fun Activities</span>
                         </div>
                     </div>
+
                 </div>
-
-                <!-- Right Hero Image Graphic Composition -->
-                <div class="lg:col-span-6 relative flex justify-center items-center" data-animate="fade-right" data-delay="200">
-                    <div class="relative w-[350px] h-[350px] sm:w-[460px] sm:h-[460px] flex items-center justify-center">
-                        
-                        <!-- Concentric Background Rings -->
-                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-800 via-fuchsia-700 to-pink-600 opacity-90 shadow-2xl"></div>
-                        <div class="absolute inset-4 sm:inset-6 rounded-full bg-kiddy-purple border-4 border-fuchsia-500/40 flex items-center justify-center overflow-hidden">
-                            <div class="w-full h-full bg-radial from-purple-500/30 to-transparent"></div>
-                        </div>
-
-                        <!-- Yellow 4-point Star on left side of ring -->
-                        <div class="absolute left-0 top-1/4 -translate-x-3 z-20">
-                            <svg class="w-12 h-12 text-yellow-400 drop-shadow-md animate-float" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
-                            </svg>
-                        </div>
-
-                        <!-- Blue origami bird / flying plane top right -->
-                        <div class="absolute top-4 right-4 z-20 animate-float" style="animation-delay: 1s;">
-                            <svg class="w-10 h-10 text-cyan-400 drop-shadow-md" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                            </svg>
-                        </div>
-
-                        <!-- Rainbow with Fluffy Clouds at bottom right -->
-                        <div class="absolute -bottom-2 right-2 z-20 flex flex-col items-center">
-                            <!-- Rainbow Arcs -->
-                            <div class="relative w-32 h-16 overflow-hidden mb-[-8px]">
-                                <div class="absolute inset-0 rounded-t-full border-[7px] border-red-500 border-b-0"></div>
-                                <div class="absolute inset-[7px] rounded-t-full border-[7px] border-yellow-400 border-b-0"></div>
-                                <div class="absolute inset-[14px] rounded-t-full border-[7px] border-cyan-400 border-b-0"></div>
-                            </div>
-                            <!-- Fluffy White Clouds -->
-                            <div class="flex items-center -space-x-2">
-                                <div class="w-8 h-8 rounded-full bg-white shadow-sm"></div>
-                                <div class="w-10 h-10 rounded-full bg-white shadow-sm -mt-2"></div>
-                                <div class="w-9 h-9 rounded-full bg-white shadow-sm"></div>
-                                <div class="w-7 h-7 rounded-full bg-white shadow-sm -ml-2"></div>
-                            </div>
-                        </div>
-
-                        <!-- Hero Jumping Girl Cutout (Clean AI segmented PNG) -->
-                        <div class="relative z-10 w-full h-full flex items-center justify-center pointer-events-none">
-                            <img src="assets/images/hero_jumping_girl.png" alt="Happy school girl jumping" class="w-[92%] h-[92%] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 hero-img-entrance">
-                        </div>
-
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Interactive Micro-animations on Full Banner -->
+
+
+
+
         </div>
 
-        <!-- ==================== WAVE DIVIDER 1: HERO TO STATS ==================== -->
-        <div class="wave-divider w-full">
-            <svg class="w-full h-16 sm:h-20 text-white fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,50 C280,110 520,10 800,65 C1080,120 1280,30 1440,60 L1440,120 L0,120 Z"></path>
+        <!-- ==================== 3D LAYERED FLUFFY CLOUDS DIVIDER ==================== -->
+        <div class="wave-divider w-full relative z-20 -mt-2">
+            <svg class="w-full h-14 sm:h-20 lg:h-24 block" viewBox="0 0 1440 140" preserveAspectRatio="none">
+                <!-- Back translucent cloud layer for soft 3D depth -->
+                <path fill="#ffffff" fill-opacity="0.45" d="M0,100 Q80,50 180,85 Q280,30 400,80 Q520,40 640,90 Q760,35 900,80 Q1040,45 1180,85 Q1310,40 1440,90 L1440,140 L0,140 Z"></path>
+                <!-- Front solid crisp white cloud layer -->
+                <path fill="#ffffff" d="M0,95 Q70,45 140,80 Q210,20 310,65 Q375,35 445,72 Q530,12 645,60 Q720,30 805,70 Q900,18 1005,65 Q1080,38 1150,75 Q1245,15 1360,60 Q1410,35 1440,80 L1440,140 L0,140 Z"></path>
             </svg>
         </div>
     </section>
@@ -262,18 +222,20 @@
                     </div>
                     <!-- Heading -->
                     <div>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading leading-tight">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading leading-tight mb-2">
                             Every Child is <br>
-                            <span class="text-slate-900">Unique &amp;</span> <span class="text-kiddy-purple">Special</span>
+                            <span class="text-slate-900">Unique &amp;</span> <span class="text-blue-700">Special</span>
                         </h2>
+                        <!-- Playful Sticker: Smiling Crocodile with Pink Bird -->
+                        <img src="assets/stickers/4193243.png" alt="Happy Crocodile Sticker" class="kid-sticker w-20 sm:w-24 object-contain inline-block mt-1" title="Hello little friend!">
                     </div>
                 </div>
 
                 <!-- Right: 4 Stat Counters in Organic Rounded Cards -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full lg:w-auto">
                     <!-- Stat 1 -->
-                    <div class="stat-organic-box bg-purple-50/70 border border-purple-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group shimmer-card" data-animate="zoom-in" data-delay="100">
-                        <div class="w-10 h-10 rounded-2xl bg-purple-200/70 text-kiddy-purple flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                    <div class="stat-organic-box bg-blue-50/70 border border-blue-100 p-4 text-center sm:text-left flex flex-col items-center sm:items-start group shimmer-card" data-animate="zoom-in" data-delay="100">
+                        <div class="w-10 h-10 rounded-2xl bg-blue-200/70 text-blue-800 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                             <i class="fa-solid fa-shapes text-lg"></i>
                         </div>
                         <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading stat-count" data-target="12" data-suffix="+">12+</span>
@@ -322,10 +284,7 @@
                 <div class="lg:col-span-7 space-y-8" data-animate="fade-left">
                     <!-- Section Title -->
                     <div>
-                        <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
-                            <span class="w-2.5 h-2.5 rounded-full bg-kiddy-yellow"></span>
-                            <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Age-Appropriate Stages</span>
-                        </div>
+
                         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
                             Our <span class="heading-underline">Programs</span>
                         </h2>
@@ -403,11 +362,13 @@
                     </div>
 
                     <!-- Button: Explore All Programs -->
-                    <div class="pt-2">
+                    <div class="pt-4 flex items-center space-x-6">
                         <button class="btn-enroll bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-7 py-3.5 rounded-full shadow-md hover:shadow-purple-700/30 transition-all text-sm flex items-center space-x-2">
                             <span>Explore All Programs</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
+                        <!-- Playful Sticker: Cute Spotted Cow -->
+                        <img src="assets/stickers/4193256.png" alt="Friendly Cow Sticker" class="kid-sticker w-16 sm:w-20 object-contain" title="Moo! Learning is fun!">
                     </div>
                 </div>
 
@@ -455,22 +416,7 @@
     <!-- ==================== WHY CHOOSE US? SECTION (Wavy Purple) ==================== -->
     <section id="why-choose-us" class="bg-kiddy-purple text-white relative pt-4 pb-0 overflow-hidden">
 
-        <!-- Floating playful elements (Rocket + trails + doodles) -->
-        <div class="absolute inset-0 pointer-events-none select-none opacity-40">
-            <!-- Rocket flying on right -->
-            <div class="absolute top-16 right-12 lg:right-24 text-center animate-rocket">
-                <div class="w-14 h-14 bg-pink-500/20 border-2 border-pink-400 rounded-full flex items-center justify-center text-pink-300 text-2xl shadow-lg">
-                    <i class="fa-solid fa-rocket"></i>
-                </div>
-                <!-- Rocket trail curve -->
-                <svg class="w-32 h-32 -mt-4 text-purple-300/40" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" viewBox="0 0 100 100">
-                    <path d="M 50 10 C 20 50, 80 80, 10 95" />
-                </svg>
-            </div>
-            <!-- Stars -->
-            <i class="fa-solid fa-star absolute top-20 left-16 text-yellow-300 text-sm animate-twinkle"></i>
-            <i class="fa-solid fa-star absolute bottom-24 right-1/3 text-purple-300 text-xs animate-twinkle"></i>
-        </div>
+
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -494,10 +440,7 @@
                 <!-- Right: Why Choose Us Content & 4 Translucent Feature Cards -->
                 <div class="lg:col-span-7 space-y-8" data-animate="fade-right" data-delay="150">
                     <div>
-                        <div class="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full mb-3">
-                            <span class="w-2.5 h-2.5 rounded-full bg-kiddy-yellow"></span>
-                            <span class="text-xs font-bold tracking-wider text-purple-200 uppercase">Our Core Strengths</span>
-                        </div>
+
                         <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
                             <span class="heading-underline heading-underline-white">Why Choose Us?</span>
                         </h2>
@@ -553,11 +496,13 @@
                     </div>
 
                     <!-- Button: Learn More -->
-                    <div class="pt-2">
+                    <div class="pt-2 flex items-center space-x-6">
                         <button class="btn-tour bg-white hover:bg-slate-100 text-kiddy-purpleDark font-bold px-8 py-3.5 rounded-full shadow-lg transition-all text-sm flex items-center space-x-2">
                             <span>Learn More</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
+                        <!-- Playful Sticker: Leaping Reindeer with Antlers -->
+                        <img src="assets/stickers/4193316.png" alt="Leaping Reindeer Sticker" class="kid-sticker w-16 sm:w-20 object-contain" title="Jump high with joy!">
                     </div>
 
                 </div>
@@ -580,10 +525,7 @@
                 
                 <!-- Left: Holistic Development Text & 4 Checkmarks -->
                 <div class="lg:col-span-7 space-y-6" data-animate="fade-left">
-                    <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full">
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                        <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Nurturing All Dimensions</span>
-                    </div>
+
 
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading leading-tight">
                         Holistic Development <br>
@@ -630,85 +572,24 @@
                     </div>
 
                     <!-- Button: Read More -->
-                    <div class="pt-4">
+                    <div class="pt-4 flex items-center space-x-6">
                         <button class="btn-tour bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-8 py-3.5 rounded-full shadow-md transition-all text-sm flex items-center space-x-2">
                             <span>Read More</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
+                        <!-- Playful Sticker: Fluffy White Sheep -->
+                        <img src="assets/stickers/4193251.png" alt="Fluffy Sheep Sticker" class="kid-sticker w-16 sm:w-20 object-contain" title="Baa! Learning together!">
                     </div>
                 </div>
 
                 <!-- Right: Cute Standing Schoolgirl cutout with globe outline -->
                 <div class="lg:col-span-5 flex justify-center items-center relative" data-animate="zoom-in-up" data-delay="200">
-                    <!-- Wireframe globe in background -->
-                    <div class="absolute -right-4 top-1/2 -translate-y-1/2 opacity-25 pointer-events-none">
-                        <svg class="w-48 h-48 text-kiddy-purple" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M2 12h20"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        </svg>
-                    </div>
-
                     <!-- Standing Girl Image (Clean AI segmented PNG) -->
                     <div class="relative z-10 w-64 sm:w-72 h-80 sm:h-96 flex items-end justify-center">
                         <img src="assets/images/standing_girl.png" alt="Cute school girl with backpack standing" class="w-full h-full object-contain drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
 
-            </div>
-        </div>
-
-        <!-- ==================== WAVE DIVIDER 4: ROLLING GREEN GRASS HILL (The User's Favorite!) ==================== -->
-        <div class="wave-divider w-full relative">
-            <svg class="w-full h-14 sm:h-20 text-emerald-400 fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,60 C240,10 520,105 800,35 C1080,-25 1280,85 1440,50 L1440,120 L0,120 Z"></path>
-            </svg>
-            
-            <!-- Sprouting nature icons along the wavy crest (as loved by the user) -->
-            <div class="absolute top-2 left-1/4 text-emerald-700 opacity-80 text-sm animate-sprout">
-                <i class="fa-solid fa-seedling"></i>
-            </div>
-            <div class="absolute top-3 left-1/2 text-emerald-700 opacity-80 text-sm animate-sprout" style="animation-delay: 1.2s;">
-                <i class="fa-solid fa-clover"></i>
-            </div>
-            <div class="absolute top-2 right-1/4 text-emerald-700 opacity-80 text-sm animate-sprout" style="animation-delay: 0.6s;">
-                <i class="fa-solid fa-leaf"></i>
-            </div>
-        </div>
-
-        <!-- Green Meadow Container with Announcement Bar -->
-        <div class="relative bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 pt-2 pb-0">
-            <!-- Mint Green Floating Announcement Bar -->
-            <div class="max-w-4xl mx-auto px-4 relative z-20 pb-8">
-                <div class="bg-white/95 border-2 border-emerald-200/90 rounded-full py-3.5 px-6 sm:px-8 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4 backdrop-blur-sm">
-                    
-                    <div class="flex items-center space-x-3 text-center sm:text-left">
-                        <div class="w-11 h-11 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 text-lg shadow-sm">
-                            <i class="fa-solid fa-bullhorn"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-slate-900 font-extrabold text-sm sm:text-base font-heading">
-                                Admissions Open for 2025-26
-                            </h4>
-                            <p class="text-xs text-slate-500 font-normal">
-                                Limited seats available! Secure your child's future today.
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="btn-enroll bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-7 py-3 rounded-full shadow-md transition-all text-xs sm:text-sm flex items-center space-x-2 flex-shrink-0 hover:scale-105">
-                        <span>Enroll Now</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </button>
-
-                </div>
-            </div>
-
-            <!-- WAVE DIVIDER 5: GREEN MEADOW TO GALLERY (WAVE TO WHITE) -->
-            <div class="wave-divider w-full">
-                <svg class="w-full h-14 sm:h-20 text-white fill-current block" viewBox="0 0 1440 120" preserveAspectRatio="none">
-                    <path d="M0,40 C320,110 600,10 920,80 C1200,135 1350,30 1440,65 L1440,120 L0,120 Z"></path>
-                </svg>
             </div>
         </div>
     </section>
@@ -718,14 +599,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Heading & Controls -->
-            <div class="text-center mb-8" data-animate="fade-up">
-                <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
-                    <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Campus Life &amp; Moments</span>
-                </div>
+            <div class="flex items-center justify-center space-x-4 mb-8" data-animate="fade-up">
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
                     <span class="heading-underline">Our Gallery</span>
                 </h2>
+                <!-- Playful Sticker: Joyful Gnome / Elf with Gifts -->
+                <img src="assets/stickers/4193257.png" alt="Playful Gnome Sticker" class="kid-sticker w-12 sm:w-16 object-contain flex-shrink-0" title="Creativity and joy!">
             </div>
 
             <!-- Gallery Slider Wrapper with Navigation Arrows -->
@@ -869,10 +748,6 @@
             
             <!-- Section Heading -->
             <div class="text-center mb-10" data-animate="fade-up">
-                <div class="inline-flex items-center space-x-2 bg-purple-50 border border-purple-200 px-3 py-1 rounded-full mb-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
-                    <span class="text-xs font-bold tracking-wider text-kiddy-purple uppercase">Parenting Insights &amp; Updates</span>
-                </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
                     <span class="heading-underline">Latest News</span>
                 </h2>
@@ -975,12 +850,7 @@
     <!-- ==================== PRE-FOOTER CTA & FOOTER ==================== -->
     <div class="relative bg-kiddy-purple text-white pt-0 pb-12 overflow-hidden" id="footer-section">
         
-        <!-- Background doodles & stars -->
-        <div class="absolute inset-0 pointer-events-none select-none opacity-25">
-            <i class="fa-solid fa-star absolute top-12 left-10 text-yellow-300 text-sm animate-twinkle"></i>
-            <i class="fa-solid fa-star absolute bottom-12 right-20 text-yellow-300 text-xs animate-twinkle"></i>
-            <i class="fa-solid fa-sparkles absolute top-1/2 right-10 text-white text-base"></i>
-        </div>
+
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
@@ -994,11 +864,9 @@
 
                 <!-- Big Golden-Yellow Pill / Capsule Banner with Organic Curves -->
                 <div class="w-full bg-gradient-to-r from-amber-400 via-kiddy-yellow to-yellow-400 text-slate-900 rounded-full px-6 sm:px-12 py-5 sm:py-6 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4 relative z-10 border-4 border-yellow-200/60">
+
                     
-                    <!-- White Star Accent on Top Left of Banner -->
-                    <div class="absolute -top-3 left-8 w-8 h-8 rounded-full bg-white text-yellow-500 flex items-center justify-center shadow-md text-sm">
-                        <i class="fa-solid fa-star"></i>
-                    </div>
+
 
                     <!-- Text inside banner -->
                     <div class="text-center md:text-left pl-0 md:pl-6">
@@ -1010,11 +878,15 @@
                         </p>
                     </div>
 
-                    <!-- Right Purple Button -->
-                    <button class="btn-enroll bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-8 py-3 rounded-full shadow-lg transition-all text-xs sm:text-sm flex items-center space-x-2 flex-shrink-0 hover:scale-105">
-                        <span>Enroll Now</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </button>
+                    <!-- Right Side: Button & Waving Bear Sticker -->
+                    <div class="flex items-center space-x-4 flex-shrink-0">
+                        <button class="btn-enroll bg-kiddy-purple hover:bg-kiddy-purpleDark text-white font-bold px-8 py-3 rounded-full shadow-lg transition-all text-xs sm:text-sm flex items-center space-x-2 hover:scale-105">
+                            <span>Enroll Now</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                        <!-- Playful Sticker: Waving Bear with Santa Hat & Gift -->
+                        <img src="assets/stickers/4193258.png" alt="Waving Bear Sticker" class="kid-sticker w-14 sm:w-16 object-contain hidden sm:block flex-shrink-0" title="Join our happy family!">
+                    </div>
 
                 </div>
 

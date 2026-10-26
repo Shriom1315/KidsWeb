@@ -10,15 +10,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Sticky Navbar Shadow Effect
+    // 2. Sticky Navbar Scroll Animation: White & Slim
     const navbar = document.getElementById('main-nav');
-    window.addEventListener('scroll', () => {
+    const scallopPath = document.getElementById('nav-scallop-path');
+    
+    const handleNavScroll = () => {
+        if (!navbar) return;
         if (window.scrollY > 30) {
-            navbar.classList.add('shadow-lg', 'bg-opacity-95', 'backdrop-blur-md');
+            navbar.classList.add('nav-scrolled', 'bg-white/95');
+            navbar.classList.remove('bg-[#1e3a8a]/90');
+            if (scallopPath) {
+                scallopPath.setAttribute('fill', '#ffffff');
+                scallopPath.setAttribute('fill-opacity', '0.96');
+            }
         } else {
-            navbar.classList.remove('shadow-lg', 'bg-opacity-95', 'backdrop-blur-md');
+            navbar.classList.remove('nav-scrolled', 'bg-white/95');
+            navbar.classList.add('bg-[#1e3a8a]/90');
+            if (scallopPath) {
+                scallopPath.setAttribute('fill', '#1e3a8a');
+                scallopPath.setAttribute('fill-opacity', '0.92');
+            }
         }
-    });
+    };
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+    handleNavScroll(); // Run immediately on load in case user refreshed mid-page
 
     // 3. Animated Stats Counters
     const statCounters = document.querySelectorAll('.stat-count');
